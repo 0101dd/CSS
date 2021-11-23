@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 內容</title>
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+  <a href="#table">跳到 table</a>
+  <h1>重置（Reboot）</h1>
+  <h2>標題和段落</h2>
+  <p>所有的標題元素，例如 h1 和 p 都已經移除了 margin-top。標題添加了 margin-bottom: .5rem ，以及段落添加了 margin-bottom: 1rem 以方便區分間隔。</p>
+
+  <hr>
+
+  <h2>列表</h2>
+  <p>移除全部列表 ul、ol 和 dl 中的 margin-top，以及 margin-bottom: 1rem。巢狀列表沒有 margin-bottom，而我們也將 ul 和 ol 元素上的 padding-left 重置。</p>
+  <ul>
+    <li>All lists have their top margin removed</li>
+    <li>And their bottom margin normalized</li>
+    <li>Nested lists have no bottom margin
+      <ul>
+        <li>This way they have a more even appearance</li>
+        <li>Particularly when followed by more list items</li>
+      </ul>
+    </li>
+    <li>The left padding has also been reset</li>
+  </ul>
+  <ol>
+    <li>Here's an ordered list</li>
+    <li>With a few list items</li>
+    <li>It has the same overall look</li>
+    <li>As the previous unordered list</li>
+  </ol>
+
+  <p>為了使樣式簡潔、層次結構清晰以及更好的間距，描述列表有更新 margin。 dd 重設 margin-left 為 0 並且新增 margin-bottom: .5rem。dt 為粗體。</p>
+  <dl>
+    <dt>Description lists</dt>
+    <dd>A description list is perfect for defining terms.</dd>
+    <dt>Term</dt>
+    <dd>Definition for the term.</dd>
+    <dd>A second definition for the same term.</dd>
+    <dt>Another term</dt>
+    <dd>Definition for this other term.</dd>
+  </dl>
+
+  <hr>
+
+  <h2>行內程式碼</h2>
+  <p>使用 code 來包覆行內片段的程式碼。請確保是用跳脫字元轉譯 HTML 尖括號 。</p>
+  <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+
+  <hr>
+
+  <h2>程式碼區塊</h2>
+  <p>pre 用於多行的程式碼。再提醒一次，請確保程式碼中的任何尖括號有用跳脫字元進行轉譯。pre 移除 margin-top 以及使用 rem 作為 margin-bottom 的單位。</p>
+  <pre>
+    <code>&lt;p&gt;Sample text here...&lt;/p&gt;
+    &lt;p&gt;And another line of sample text here...&lt;/p&gt;
+    </code>
+  </pre>
+
+  <hr>
+
+  <h2>變數</h2>
+  <p>使用 var 標籤來指定變數。</p>
+  <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+
+  <hr>
+
+  <h2>用戶輸入</h2>
+  <p>使用 kbd 標籤來表示透過鍵盤輸入的指令。</p>
+  To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+  To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+
+  <hr>
+
+  <h2>實例輸出</h2>
+  <p>使用 samp 標籤來表示由程式輸出的實例。</p>
+  <samp>This text is meant to be treated as sample output from a computer program.</samp>
+
+  <h2 id="table">表格</h2>
+  <p>微調整表格中的 caption 樣式，合併邊框，並確保整體的 text-align 是一致的。針對 borders、padding 以及更多的其他變化將透過 .table 類別 達成。</p>
+  <table>
+    <caption>
+      This is an example table, and this is its caption to describe the contents.
+    </caption>
+    <thead>
+      <tr>
+        <th>Table heading</th>
+        <th>Table heading</th>
+        <th>Table heading</th>
+        <th>Table heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>按鈕上的指示</h2>
+  <p>Reboot 增加 role="button" 將預設游標改為 pointer。此屬性添加到元素上用來輔助指示元素是可以互動的。button 原先就具有 cursor 的變化，所以 role 不是必須的。</p>
+  <span role="button" tabindex="0">Non-button element button</span>
+
+  <hr>
+
+  <h2>行內元素</h2>
+  <p>abbr 元素的基本樣式讓它與段落文字之間有明顯突出。</p>
+  <abbr title="HyperText Markup Language">HTML</abbr>
+
+  <hr>
+
+  <h2>Summary</h2>
+  <p>summary 的預設 cursor 是 text，所以我們將其重置為 pointer，元素可以透過點擊產生互動性。</p>
+
+  <details>
+    <summary>第一章</summary>
+    <ul>
+      <li>第一節</li>
+      <li>第二節</li>
+      <li>第三節</li>
+    </ul>
+  </details>
+
+  <hr>
+
+
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

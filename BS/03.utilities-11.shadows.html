@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    :root {
+      --shadow-x: 0;
+      --shadow-y: 0;
+      --shadow-blur: 1rem;
+      --shadow-rgb: 120, 140, 0;
+      --shadow-opacity: 0.5;
+    }
+
+    .shadow-1 {
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .shadow-self {
+      box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) rgba(var(--shadow-rgb), var(--shadow-opacity));
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>陰影 (Shadows)</h1>
+    <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
+    <div class="shadow-sm p-3 mb-5 bg-body rounded">Small shadow</div>
+    <div class="shadow p-3 mb-5 bg-body rounded">Regular shadow</div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">Larger shadow</div>
+    <div class="shadow-1 p-3 mb-5 bg-body rounded">myself shadow</div>
+    <h1>調整 CSS 原生變數</h1>
+    <div class="shadow-self p-3 mb-5 bg-body rounded">Self shadow</div>
+    <input id="range" type="range" min="0" max="100" value="0">
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    const range = document.querySelector('#range')
+    const shadowSelf = document.querySelector('.shadow-self')
+    // console.log(range, shadowSelf)
+    range.addEventListener('change', changeHandler)
+    function changeHandler(e) {
+      let r = randomNumber(e)
+      let g = randomNumber(e)
+      let b = randomNumber(e)
+      shadowSelf.style.setProperty('--shadow-blur', e.target.value + 'px')
+      shadowSelf.style.setProperty('--shadow-rgb', `${r},${g},${b}`)
+      console.log(shadowSelf.style.getPropertyValue('--shadow-rgb'))
+    }
+
+    function randomNumber(eventObject) {
+      return Math.floor(Math.random() * 25 * eventObject.target.value / 10)
+    }
+  </script>
+</body>
+
+</html>

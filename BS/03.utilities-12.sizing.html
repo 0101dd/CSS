@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h3 {
+      margin: 20px 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>尺寸 (Sizing)</h1>
+    <h2>相對於父元素</h2>
+    <h3>寬度</h3>
+    <p>寬度和高度通用類別從 _utilities.scss 中產生。預設包含 25%, 50%, 75%, 100% 和 auto 。按你的需求調整這些值，可產生不同的屬性。</p>
+    <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
+    <div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
+    <div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
+    <div class="w-100 p-3" style="background-color: #eee;">Width 100%</div>
+    <div class="w-auto p-3" style="background-color: #eee;">Width auto</div>
+
+    <h3>高度</h3>
+    <div style="height: 100px; background-color: rgba(255,0,0,0.1);">
+      <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%</div>
+      <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%</div>
+      <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>
+      <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%</div>
+      <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height auto</div>
+    </div>
+
+    <h3>mw-100、mh-100</h3>
+    <p>mw-100、mh-100 具有限制寬度、高度的作用，例如圖片寬度大於父元素寬度，mw-100 才會有限制作用</p>
+    <div class="row">
+      <div class="col-6">
+        <img class="mw-100" src="https://picsum.photos/2000/800/?random=1">
+      </div>
+      <div class="col-6">
+        <img class="w-100" src="https://picsum.photos/200/80/?random=1">
+      </div>
+    </div>
+  </div>
+
+  <h3>滿版</h3>
+  <h4>第一種</h4>
+  <div class="vh-100 bg-info"></div>
+  <h4>第二種</h4>
+  <div class="h-100 bg-success"></div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

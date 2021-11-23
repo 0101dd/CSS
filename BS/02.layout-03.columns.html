@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 排版</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .row {
+      background: #eee;
+      margin-bottom: 1rem;
+    }
+
+    .row>*:nth-child(1) {
+      background: var(--bs-teal);
+    }
+
+    .row>*:nth-child(2) {
+      background: var(--bs-cyan);
+    }
+
+    .row>*:nth-child(3) {
+      background: var(--bs-yellow);
+    }
+
+    .row>*:nth-child(4) {
+      background: var(--bs-pink);
+    }
+
+    .row>*:nth-child(5) {
+      background: var(--bs-purple);
+    }
+
+    h3 {
+      margin: 1.5rem 0;
+    }
+
+    h4 {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>欄(Columns)</h1>
+    <p>.row 是彈性盒，因此 .col 系列的欄位是彈性項目，可以使用 BS 提供的彈性盒屬性 class 來對齊。</p>
+
+    <h2>對齊</h2>
+    <p>使用 flexbox 對齊垂直和水平</p>
+    <h3>垂直對齊(align-items)</h3>
+    <h4>align-items-*</h4>
+    <div class="row align-items-start align-items-md-center align-items-xl-end" style="height:200px;">
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+    </div>
+
+    <h4>align-self-*</h4>
+    <div class="row" style="height:200px;">
+      <div class="col align-self-start">col</div>
+      <div class="col align-self-center">col</div>
+      <div class="col align-self-end">col</div>
+    </div>
+
+    <h3>水平對齊(justify-content)</h3>
+    <h4>justify-content-*</h4>
+    <div class="row justify-content-start justify-content-md-center justify-content-xl-end ">
+      <div class="col-4">col</div>
+      <div class="col-4">col</div>
+    </div>
+
+    <h3>自己玩</h3>
+    <div class="row justify-content-center align-items-center justify-content-lg-end align-items-lg-end" style="height:200px;">
+      <div class="col-3">col</div>
+      <div class="col-3">col</div>
+    </div>
+
+    <h2>Column breaks</h2>
+    <p>新增一個 .w-100 的 div 換行</p>
+    <div class="row">
+      <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+      <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+      <!-- Force next columns to break to new line -->
+      <div class="w-100"></div>
+
+      <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+      <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+    </div>
+
+    <h3>使用 d-none、d-block 來決定要不要換行</h3>
+    <div class="row">
+      <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+      <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+
+      <!-- Force next columns to break to new line at md breakpoint and up -->
+      <div class="w-100 d-none d-md-block"></div>
+
+      <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+      <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+    </div>
+
+    <h3>order-*</h3>
+    <div class="row text-white">
+      <div class="col order-3">第1欄</div>
+      <div class="col order-5">第2欄</div>
+      <div class="col order-1">第3欄</div>
+      <div class="col">第4欄</div>
+      <div class="col">第5欄</div>
+    </div>
+
+    <h3>order-first、order-last</h3>
+    <div class="row text-white">
+      <div class="col order-last">第1欄</div>
+      <div class="col">第2欄</div>
+      <div class="col">第3欄</div>
+      <div class="col">第4欄</div>
+      <div class="col order-first">第5欄</div>
+    </div>
+
+    <h3>位移</h3>
+    <h4>offset的位移</h4>
+    <div class="row">
+      <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+      <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+      <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+    </div>
+    <h4>margin位移</h4>
+    <div class="row">
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+      <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-auto">.col-auto .me-auto</div>
+      <div class="col-auto ms-auto">.col-auto</div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">.col-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-auto mx-auto">.col-auto</div>
+    </div>
+
+    <div class="row">
+      <div class="col-auto me-auto">
+        <div class="logo">logo</div>
+      </div>
+      <div class="col-auto">
+        <a href="#">LINK</a>
+        <a href="#">LINK</a>
+        <a href="#">LINK</a>
+        <a href="#">LINK</a>
+      </div>
+    </div>
+
+    <h3>當成獨立 column class</h3>
+    <h4>float</h4>
+    <div class="clearfix">
+      <img src="https://picsum.photos/1000/1000/?random=1" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+      <p>
+        A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to
+        demonstrate how the columns interact here with the floated image.
+      </p>
+      <p>
+        As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than
+        just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really
+        be read.
+      </p>
+
+      <p>
+        And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke,
+        perhaps. Unfortunately, there's none of that here.
+      </p>
+    </div>
+    <h4>row 與 col</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <p>
+          A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to
+          demonstrate how the columns interact here with the floated image.
+        </p>
+
+        <p>
+          As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than
+          just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really
+          be read.
+        </p>
+
+        <p>
+          And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A
+          joke,
+          perhaps. Unfortunately, there's none of that here.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://picsum.photos/1000/1000/?random=1" class="img-fluid" alt="...">
+      </div>
+    </div>
+
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 內容</title>
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>表格 (Tables)</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>變數</h2>
+    <table class="table table-primary">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </table>
+
+    <h3>情境顏色可在 td</h3>
+    <table class="table">
+      <tr>
+        <td class="table-info">1</td>
+        <td class="table-danger">2</td>
+        <td class="table-warning">3</td>
+      </tr>
+      <tr>
+        <td class="table-dark">1</td>
+        <td class="table-secondary">2</td>
+        <td class="table-light">3</td>
+      </tr>
+    </table>
+
+    <h2>條紋行與滑入變化</h2>
+    <table class="table table-dark table-striped table-hover">
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr class="table-primary">
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr class="table-active">
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+    </table>
+
+    <h2>帶框的表格</h2>
+    <table class="table table-bordered">
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+    </table>
+
+    <h2>無框的表格</h2>
+    <table class="table table-borderless">
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+    </table>
+
+    <h2>小表格</h2>
+    <p>使用 .table-sm 將儲存格 padding 縮減一半的方式讓表格更加精簡。</p>
+    <table class="table table-sm">
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+    </table>
+
+    <h2>垂直對齊</h2>
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th scope="col" class="w-25">Heading 1</th>
+            <th scope="col" class="w-25">Heading 2</th>
+            <th scope="col" class="w-25">Heading 3</th>
+            <th scope="col" class="w-25">Heading 4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+            <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+            <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+            <td>This here is some placeholder text, intended to take up quite a bit of vertical space, to demonstrate how the vertical alignment works in the
+              preceding cells.</td>
+          </tr>
+          <tr class="align-bottom">
+            <td>This cell inherits <code>vertical-align: bottom;</code> from the table row</td>
+            <td>This cell inherits <code>vertical-align: bottom;</code> from the table row</td>
+            <td>This cell inherits <code>vertical-align: bottom;</code> from the table row</td>
+            <td>This here is some placeholder text, intended to take up quite a bit of vertical space, to demonstrate how the vertical alignment works in the
+              preceding cells.</td>
+          </tr>
+          <tr>
+            <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+            <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+            <td class="align-top">This cell is aligned to the top.</td>
+            <td>This here is some placeholder text, intended to take up quite a bit of vertical space, to demonstrate how the vertical alignment works in the
+              preceding cells.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>響應式表格</h2>
+    <div class="table-responsive-sm">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

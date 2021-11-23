@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 內容</title>
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>圖片 (Images)</h1>
+    <h2>響應式圖片</h2>
+    <p>Bootstrap 中的圖片可利用 .img-fluid 設定為響應式圖片。運用 max-width: 100%; 和 height: auto;，讓圖片可依父元素進行縮放。</p>
+    <img class="img-fluid" src="https://picsum.photos/1920/400/?random=1">
+
+    <hr>
+
+    <h2>圖片縮略圖</h2>
+    <p>除了我們的 邊框-圓角 通用類別 之外，你可以使用 .img-thumbnail 讓圖片呈現圓角 1px 的邊框。</p>
+    <img class="img-thumbnail" src="https://picsum.photos/200/200/?random=1">
+
+    <hr>
+
+    <h2>對齊圖片</h2>
+    <p>
+      BS5 開始使用 start、end 代表文件流方向，對大多數國家來說網頁都是由左向右，也就是說 start 是 left， end 是 right，
+      但對於阿語系國家，文件流向是根我們相反，start 會變成 right，end 會變成 left。
+    </p>
+    <p>BS4 沒有這個限制，單純用 float-left、float-right 來表示左、右。</p>
+    <div class="bg-dark clearfix">
+      <img class="float-start" src="https://picsum.photos/100/100/?random=1">
+      <img class="float-end" src="https://picsum.photos/100/100/?random=1">
+    </div>
+
+    <hr>
+
+    <h2>圖片置中兩種方式</h2>
+    <h3>第一種 block 圖片，再使用 margin: auto</h3>
+    <img class="d-block mx-auto" src="https://picsum.photos/100/100/?random=1">
+    <div class="mx-auto bg-dark" style="width:100px;height:100px;"></div>
+    <h3>第二種圖片是替代元素(replace element)一種，具有類似 inline-block 的特性，所以父元素可使用 text-align:center</h3>
+    <div class="text-center">
+      <img src="https://picsum.photos/100/100/?random=1">
+    </div>
+
+    <hr>
+
+    <h2>圖片標籤</h2>
+    <p>如果使用 picture 為特定的 img 詳細描述多個 source 元素，要確保 .img-* 類別添加在 img 而非 picture 標籤上。</p>
+    ​<picture>
+      <source srcset="./images/apple.png" media="(min-width: 1200px)" class="img-fluid">
+      <source srcset="./images/orange.png" media="(min-width: 576px)" class="img-fluid">
+      <img src="./images/banana.png" class="img-fluid img-thumbnail">
+    </picture>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

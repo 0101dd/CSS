@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 內容</title>
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .text-truncate {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .mutiple-line-dot {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>決定歡迎您年齡，會。</h1>
+  <p class="h1">h1. Bootstrap heading</p>
+
+  <h2>自定義標題</h2>
+  <p>使用通用類別重現 Bootstrap 3.0 中的小標題文本。</p>
+  <h3>
+    Fancy display heading
+    <small class="text-muted">With faded secondary text</small>
+  </h3>
+
+  <hr>
+
+  <h2>顯示標題</h2>
+  <p>一般的標題元素能在頁面內容繁多時發揮最佳作用。當你需要突出一個標題時，請考慮使用 display heading 以獲得更大、更細、稍具有風格化的標題樣式。</p>
+  <h1 class="display-1">Display 1</h1>
+  <h1 class="display-2">Display 2</h1>
+  <h1 class="display-3">Display 3</h1>
+  <h1 class="display-4">Display 4</h1>
+  <h1 class="display-5">Display 5</h1>
+  <h1 class="display-6">Display 6</h1>
+
+  <hr>
+
+  <h2>前導主題</h2>
+  <p>使用 .lead 讓一個段落脫穎而出。</p>
+  <p>This is a lead paragraph. It stands out from regular paragraphs.</p>
+  <p class="lead">
+    This is a lead paragraph. It stands out from regular paragraphs.
+  </p>
+
+  <hr>
+
+  <h2>行內文本元素</h2>
+  <p>使用行內 HTML5 元素的格式。</p>
+  <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+  <p><del>This line of text is meant to be treated as deleted text.</del></p>
+  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u>This line of text will render as underlined.</u></p>
+  <p><small>This line of text is meant to be treated as fine print.</small></p>
+  <p><strong>This line rendered as bold text.</strong></p>
+  <p><em>This line rendered as italicized text.</em></p>
+
+  <h2>對齊</h2>
+  <p>使用文字通用類別來更改 blockquote 的對齊方式。</p>
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>
+  <!-- 我們是 ltr 左(left) => start，右(right) => end -->
+  <!-- 阿語系是 rtl 左(left) => end，右(right) => start -->
+  <figure class="text-end">
+    <blockquote class="blockquote">
+      <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>
+
+  <hr>
+
+  <h2>描述型列表對齊</h2>
+  <p>通過使用我們網格系統定義的類別（或是語意 mixins）將項目和說明水平對齊。對於較長的術語，你可選擇性加上 .text-truncate 來用 … 取代多餘內容。</p>
+  <h3>單行...</h3>
+  <p class="bg-info text-truncate" style="width:300px">
+    給你畢業生新手地位組合彩色十大和平世界顯卡貨幣交易，大型師傅經典一句你還一下畫面體現什麼樣還有家裡嘗試，奇怪外貿一座便宜太麻里新年成本減少必要專輯簽名起來能在，每頁故障工商汽車似乎這麼多緩緩配件一部收到去年銷售或許，正確去年保持才會一切在這個青草湖一下子。
+  </p>
+  <h3>多行...</h3>
+  <p class="bg-info mutiple-line-dot" style="width:300px">
+    給你畢業生新手地位組合彩色十大和平世界顯卡貨幣交易，大型師傅經典一句你還一下畫面體現什麼樣還有家裡嘗試，奇怪外貿一座便宜太麻里新年成本減少必要專輯簽名起來能在，每頁故障工商汽車似乎這麼多緩緩配件一部收到去年銷售或許，正確去年保持才會一切在這個青草湖一下子。
+  </p>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

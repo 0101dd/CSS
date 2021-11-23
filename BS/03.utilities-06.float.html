@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      color: white;
+      line-height: 100px;
+      background: #333;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>浮動（Float）</h1>
+    <p><b>float-left(BS4) 更動為 float-start(BS5)</b></p>
+    <p><b>float-right(BS4) 更動為 float-end(BS5)</b></p>
+    <div class="bg-primary clearfix">
+      <div class="box float-start">float-start</div>
+      <div class="box float-end">float-end</div>
+      <div class="box mx-auto">box</div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

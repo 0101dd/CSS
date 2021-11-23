@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 排版</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .row {
+      margin-bottom: 1rem;
+    }
+
+    .row>*:nth-child(odd) {
+      background: lightskyblue;
+    }
+
+    .row>*:nth-child(even) {
+      background: lightgreen;
+    }
+
+    .row>* {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>容器</h1>
+    <p>容器分為固定容器、滿版容器，記住一件事，兩種容器都是用來裝載各種內容，以及維持版型視覺所要呈現的寬度。</p>
+    <h2>固定容器</h2>
+    <p>固定容器指通過某個斷點後，為該固定容器設定 max-width 尺寸，在尚未通過斷點都是維持 width:100%。</p>
+  </div>
+
+  <div class="container bg-primary text-white mb-5">.container 固定容器（常用）</div>
+  <div class="container-sm bg-info text-white mb-5">.container-sm 固定容器</div>
+  <div class="container-md bg-success text-white mb-5">.container-md 固定容器</div>
+  <div class="container-lg bg-danger text-white mb-5">.container-lg 固定容器</div>
+  <div class="container-xl bg-warning text-white mb-5">.container-xl 固定容器</div>
+  <div class="container-xxl bg-secondary text-white mb-5">.container-xxl 固定容器</div>
+
+  <div class="container">
+    <h2>滿版容器</h2>
+    <p>滿版容器不受斷點影響，總是維持滿版</p>
+  </div>
+
+  <div class="container-fluid bg-dark text-white">滿版容器（常用）</div>
+
+  <hr>
+
+  <div class="container">
+    <h1>網格系統（Grid System）</h1>
+    <ul>
+      <li>為 12 欄位系統，在某個斷點尺寸，一列裡面欄位分布的狀況。</li>
+      <li>row 為一列</li>
+      <li>col 為欄位</li>
+      <li></li>
+    </ul>
+
+    <h2>等寬</h2>
+    <h3>xs 最小尺寸開始，一列兩欄等寬</h3>
+    <p>.col、.col-sm、.col-md、.col-lg、.col-xl、.col-xxl 為等寬欄位，依據斷點去做等寬的變化。</p>
+    <div class="row">
+      <div class="col">xs 最小尺寸開始等寬</div>
+      <div class="col">xs 最小尺寸開始等寬</div>
+    </div>
+
+    <h3>md 尺寸開始，一列三欄等寬</h3>
+    <div class="row">
+      <div class="col-md">md 尺寸開始等寬</div>
+      <div class="col-md">md 尺寸開始等寬</div>
+      <div class="col-md">md 尺寸開始等寬</div>
+    </div>
+
+    <h3>xl 尺寸開始，一列四欄等寬</h3>
+    <div class="row">
+      <div class="col-xl">xl 尺寸開始等寬</div>
+      <div class="col-xl">xl 尺寸開始等寬</div>
+      <div class="col-xl">xl 尺寸開始等寬</div>
+      <div class="col-xl">xl 尺寸開始等寬</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>設置一欄寬度</h2>
+    <p>斷點綴詞後面有數字的 class，例如 .col-6、.col-md-6、.col-lg-6...，這系列指根據 class 所設定的百分比為寬度的值。</p>
+
+    <h3>使用數字分配欄寬</h3>
+    <div class="row">
+      <!-- xs 以上兩欄均分 -->
+      <div class="col-6">col-6</div>
+      <div class="col-6">col-6</div>
+
+      <!-- md 以上三欄均分 -->
+      <div class="col-md-4">col-md-4</div>
+      <div class="col-md-4">col-md-4</div>
+      <div class="col-md-4">col-md-4</div>
+
+      <!-- xl 以上四欄均分 -->
+      <div class="col-lg-3">col-lg-3</div>
+      <div class="col-lg-3">col-lg-3</div>
+      <div class="col-lg-3">col-lg-3</div>
+      <div class="col-lg-3">col-lg-3</div>
+
+      <!-- lg 以上 8、4 分 -->
+      <div class="col-lg-8">col-lg-8</div>
+      <div class="col-lg-4">col-lg-4</div>
+
+      <!-- xs 以上 3、6、3 分 -->
+      <div class="col-3">col-3</div>
+      <div class="col-6">col-6</div>
+      <div class="col-3">col-3</div>
+    </div>
+
+    <h3>超過 12 換行</h3>
+    <div class="row">
+      <div class="col-8">col-8</div>
+      <div class="col-4">col-4</div>
+      <div class="col-4">col-4</div>
+      <div class="col-5">col-5</div>
+      <div class="col-4">col-4</div>
+      <div class="col-9">col-9</div>
+    </div>
+
+    <h3>決定某個欄寬等份，其餘等寬</h3>
+    <div class="row">
+      <div class="col">
+        最小尺寸將剩餘 6 等均分，得到 3 等份
+      </div>
+      <div class="col-6">
+        最小尺寸佔據 6 等份
+      </div>
+      <div class="col">
+        最小尺寸將剩餘 6 等均分，得到 3 等份
+      </div>
+    </div>
+
+    <h3>難均分的狀況，佔據 5 等份，剩餘 7 等份無法數字均分</h3>
+    <div class="row">
+      <div class="col">col</div>
+      <div class="col-5">col</div>
+      <div class="col">col</div>
+    </div>
+
+    <h3>例子：混合使用</h3>
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 col-xl-3">col</div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">col</div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">col</div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">col</div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">col</div>
+      <div class="col-sm-6 col-lg-4 col-xl-3">col</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>可變寬度內容</h2>
+    <p>基於欄內容的自然寬度，可使用 col-{breakpoint}-auto 調整欄的大小。</p>
+    <h3>以內容寬度為準</h3>
+    <div class="row justify-content-center">
+      <div class="col-lg-2">col-lg-2</div>
+      <div class="col-lg-auto">col-lg-auto</div>
+      <div class="col-lg-2">col-lg-2</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3>例子</h3>
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-2">
+        1 of 3
+      </div>
+      <div class="col-md-auto">
+        Variable width content
+      </div>
+      <div class="col col-lg-2">
+        3 of 3
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        1 of 3
+      </div>
+      <div class="col-md-auto">
+        Variable width content
+      </div>
+      <div class="col col-lg-2">
+        3 of 3
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>水平堆疊</h2>
+    <div class="row">
+      <div class="col-sm-8">col-sm-8</div>
+      <div class="col-sm-4">col-sm-4</div>
+    </div>
+    <div class="row">
+      <div class="col-sm">col-sm</div>
+      <div class="col-sm">col-sm</div>
+      <div class="col-sm">col-sm</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3>混合匹配</h3>
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+      <div class="col-md-8">.col-md-8</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+      <div class="col-6">.col-6</div>
+      <div class="col-6">.col-6</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>列與欄</h2>
+    <p>另一種快速指定欄位彈性寬度的方式，也有斷點設置，.row-cols-*(1~6)，設定在 .row 彈性盒上。</p>
+    <h3>均分兩欄</h3>
+    <div class="row row-cols-2">
+      <div>Column</div>
+      <div>Column</div>
+      <div>Column</div>
+      <div>Column</div>
+    </div>
+    <h3>均分三欄</h3>
+    <div class="row row-cols-3">
+      <div>Column</div>
+      <div>Column</div>
+      <div>Column</div>
+      <div>Column</div>
+    </div>
+    <h3>欄位寬度會是內容寬度</h3>
+    <div class="row row-cols-auto">
+      <div>Column</div>
+      <div>Column</div>
+      <div>Column</div>
+      <div>Column</div>
+    </div>
+
+    <h3>每列四欄，每欄應該是 25%，但因為 .col-6 是 50%，因此最後一欄會換行</h3>
+    <div class="row row-cols-4">
+      <div>Column</div>
+      <div>Column</div>
+      <div class="col-6">Column</div>
+      <div>Column</div>
+    </div>
+
+    <h3>xs 指定每列一欄，sm 指定每列兩欄，md 指定每列 4欄</h3>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+      <div class="col">Column</div>
+      <div class="col">Column</div>
+      <div class="col">Column</div>
+      <div class="col">Column</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>巢狀</h2>
+    <p>可以使用巢狀網格，例如在 .col-sm-9 的空間使用 12 欄網格。</p>
+    <div class="row">
+      <div class="col-sm-3">
+        Level 1: .col-sm-3
+      </div>
+      <div class="col-sm-9">
+        <div class="row m-0">
+          <div class="col-8 col-sm-6">
+            Level 2: .col-8 .col-sm-6
+          </div>
+          <div class="col-4 col-sm-6">
+            Level 2: .col-4 .col-sm-6
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

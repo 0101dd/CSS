@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h2 {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Disyaply</h1>
+    <h2>display-inline</h2>
+    <div class="d-inline bg-primary text-white p-2">ITEM</div>
+    <div class="d-inline bg-info text-white p-2">ITEM</div>
+    <div class="d-inline bg-success text-white p-2">ITEM</div>
+    <div class="d-inline bg-warning text-white p-2">ITEM</div>
+    <div class="d-inline bg-danger text-white p-2">ITEM</div>
+
+    <h2>display:flex</h2>
+    <div class="d-flex">
+      <div class="bg-primary text-white p-2">ITEM</div>
+      <div class="bg-info text-white p-2">ITEM</div>
+      <div class="bg-success text-white p-2">ITEM</div>
+      <div class="bg-warning text-white p-2">ITEM</div>
+      <div class="bg-danger text-white p-2">ITEM</div>
+    </div>
+
+    <h2>隱藏元素</h2>
+    <div class="d-lg-none bg-primary text-white">lg 尺寸以上消失</div>
+    <div class="d-none d-lg-block bg-success text-white">xs 尺寸以上會消失，lg 尺寸以上會出現</div>
+
+    <h2>運用在列印的 Display</h2>
+    <div class="d-print-none bg-danger text-white">1. 螢幕出現 (列印時隱藏)</div>
+    <div class="d-none d-print-block bg-success text-white">2. 列印出現 (螢幕時隱藏)</div>
+    <div class="d-none d-lg-block d-print-block bg-primary text-white">3. xs 消失，lg 出現，列印出現</div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

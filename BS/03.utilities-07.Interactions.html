@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h2 {
+      margin: 20px 0;
+    }
+
+    .box {
+      width: 250px;
+      height: 250px;
+      line-height: 250px;
+      background: #eee;
+      text-align: center;
+      position: relative;
+    }
+
+    /* 假設動畫粒子效果蓋住連結，無法點選 */
+    .particle {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      /* 設定為穿透 */
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>互動 (Interactions)</h1>
+    <p class="user-select-all">當使用者點選時，這個段落將會被全選。</p>
+    <p class="user-select-auto">這個段落具有預設的選取行為。</p>
+    <p class="user-select-none">當使用者點選的時候，此段落將不會被選取</p>
+  </div>
+
+  <div class="container">
+    <h1>Pointer 事件</h1>
+    <p><a href="#" class="pe-none" tabindex="-1" aria-disabled="true">這個連結</a> 不可被點選</p>
+    <p><a href="#" class="pe-auto">這個連結</a> 可以被點選 (此為預設行為).</p>
+    <p class="pe-none"><a href="#" tabindex="-1" aria-disabled="true">這個連結</a> 無法被點選，因為其 <code>pointer-events</code> 屬性繼承自父層。然而 <a href="#"
+         class="pe-auto">這個連結</a> 具有 <code>pe-auto</code> 類別，因此可以被點選。</p>
+
+    <h2>定位堆疊造成連結可點選的假象</h2>
+    <div class="box">
+      <a href="#">前往連結</a>
+      <div class="particle"></div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

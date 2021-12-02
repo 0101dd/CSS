@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .triangle {
+      width: 100px;
+      height: 100px;
+      background: url("https://picsum.photos/100/100/?random=1") no-repeat center/cover;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 68%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>按鈕群組 (Button group)</h1>
+    <p>將一系列帶有 .btn 的按鈕用 .btn-group 包裝。</p>
+    <div class="row">
+      <div class="col">
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary">Left</button>
+          <button type="button" class="btn btn-primary">Middle</button>
+          <button type="button" class="btn btn-primary">Right</button>
+        </div>
+      </div>
+    </div>
+
+    <h2>這些類別也可以被添加到連結群組中，以替代 .nav 導覽元件。</h2>
+    <div class="row">
+      <div class="col">
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary active">Active link</a>
+          <a href="#" class="btn btn-primary">Link</a>
+          <a href="#" class="btn btn-primary">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>混和樣式</h2>
+    <div class="row">
+      <div class="col">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-danger">Left</button>
+          <button type="button" class="btn btn-warning">Middle</button>
+          <button type="button" class="btn btn-success">Right</button>
+        </div>
+      </div>
+    </div>
+
+    <h2>Outline 樣式</h2>
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+      <button type="button" class="btn btn-outline-primary">Left</button>
+      <button type="button" class="btn btn-outline-primary">Middle</button>
+      <button type="button" class="btn btn-outline-primary">Right</button>
+    </div>
+
+    <h2>核取方塊和選項按鈕群組</h2>
+    <p>也可以用來設計 label、input，在 input 新增 .btn-check</p>
+    <div class="row">
+      <div class="col">
+        <div class="btn-group" role="group">
+          <input type="checkbox" class="btn-check" id="btncheck1">
+          <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+          <input type="checkbox" class="btn-check" id="btncheck2">
+          <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+          <input type="checkbox" class="btn-check" id="btncheck3">
+          <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="btn-group" role="group">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked>
+          <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
+          <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
+          <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+        </div>
+      </div>
+    </div>
+
+    <h2>clip-path</h2>
+    <p>使用 generator:<a href="https://bennettfeely.com/clippy/">https://bennettfeely.com/clippy/</a></p>
+    <div class="row">
+      <div class="col">
+        <div class="triangle"></div>
+      </div>
+    </div>
+
+    <h2>縮放</h2>
+    <p>不必將按鈕尺寸調整類別套用在群組內的每一個按鈕上，只需要在每個帶有 .btn-group 的元件加上 .btn-group-* 即可。</p>
+    <div class="btn-group btn-group-lg" role="group" aria-label="...">...</div>
+    <div class="btn-group" role="group" aria-label="...">...</div>
+    <div class="btn-group btn-group-sm" role="group" aria-label="...">...</div>
+
+    <h2>垂直變化</h2>
+    <p>將一組按鈕垂直堆疊而不是水平呈現。此處不支援分割下拉式功能表。</p>
+
+    <div class="row gy-3">
+      <div class="col-12">
+        <div class="btn-group-vertical" role="group">
+          <button type="button" class="btn btn-dark">Button</button>
+          <button type="button" class="btn btn-dark">Button</button>
+          <button type="button" class="btn btn-dark">Button</button>
+          <button type="button" class="btn btn-dark">Button</button>
+          <button type="button" class="btn btn-dark">Button</button>
+          <button type="button" class="btn btn-dark">Button</button>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+          <button type="button" class="btn btn-primary">Button</button>
+          <button type="button" class="btn btn-primary">Button</button>
+          <div class="btn-group" role="group">
+            <button id="btnGroupVerticalDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-primary">Button</button>
+          <button type="button" class="btn btn-primary">Button</button>
+          <div class="btn-group" role="group">
+            <button id="btnGroupVerticalDrop2" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2">
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group" role="group">
+            <button id="btnGroupVerticalDrop3" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop3">
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group" role="group">
+            <button id="btnGroupVerticalDrop4" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop4">
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked="">
+          <label class="btn btn-outline-danger" for="vbtn-radio1">Radio 1</label>
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+          <label class="btn btn-outline-danger" for="vbtn-radio2">Radio 2</label>
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+          <label class="btn btn-outline-danger" for="vbtn-radio3">Radio 3</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

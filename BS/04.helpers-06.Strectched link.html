@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h2,
+    h3,
+    h5 {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>連結延伸 (Stretched link)</h1>
+    <div class="card" style="width: 18rem;">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">帶有延伸連結的卡片</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+      </div>
+    </div>
+
+    <p>大多數自定義的元件並不預設帶有 position: relative，因此必須添加 position: relative，避免連結延伸到父容器以外的地方。</p>
+    <div class="d-flex position-relative">
+      <img src="https://picsum.photos/150/150/?random=1" class="card-img-top">
+      <div>
+        <h5 class="mt-0">Custom component with stretched link</h5>
+        <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it
+          here to give the component a bit of body and size.</p>
+        <a href="#" class="stretched-link">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

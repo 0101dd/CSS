@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    span:focus {
+      color: Red;
+    }
+
+    .btn-block {
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>按鈕 (Buttons)</h1>
+    <p>使用 .btn 建立按鈕的基礎樣式，接著才能使用其他情境顏色、大小、外框的 class...</p>
+    <div class="row">
+      <div class="col">
+        <!-- oocss 的寫法 -->
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>按鈕標籤</h1>
+    <p>.btn 被設計成需要與 button 元素一起使用。 但是，您也可以在 a 或 input 元素上使用這些 Class（儘管有些瀏覽器可能會使用稍微不同的渲染）。</p>
+    <a class="btn btn-primary" href="#" role="button">Link</a>
+    <button class="btn btn-primary" type="submit">Button</button>
+    <input class="btn btn-primary" type="button" value="Input">
+    <input class="btn btn-primary" type="submit" value="Submit">
+    <input class="btn btn-primary" type="reset" value="Reset">
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>Outline 按鈕樣式</h1>
+    <p>.btn-outline-* 可以使用按鈕外框樣式。</p>
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-light">Light</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>尺寸</h1>
+    <p>想要較大或較小的按鈕？加入 .btn-lg 或 .btn-sm 來套用尺寸。</p>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-primary btn-sm">Small button</button>
+        <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>禁用狀態</h1>
+    <p>透過將 disabled 布林屬性添加到任何 button 元素中，使按鈕看起來處於禁用狀態。被禁用的按鈕具有 pointer-events: none，以防止觸發滑入以及啟用狀態。</p>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
+        <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+      </div>
+    </div>
+    <p>a 不支援 disabled 屬性，所以你必須添加 .disabled 使它在視覺上看起來被禁用。</p>
+    <div class="row">
+      <div class="col">
+        <a class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+        <a class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>
+      </div>
+    </div>
+    <h2>連結功能警告</h2>
+    <div class="row">
+      <div class="col">
+        <span tabindex="1">lorem</span>
+        <span tabindex="3">lorem</span>
+        <span tabindex="4">lorem</span>
+        <span tabindex="2">lorem</span>
+      </div>
+      <div class="col">
+        <!-- 沒有 tabindex = "-1" 按 tab 可以選到連結，按下 enter 會有連結效果-->
+        <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+        <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>
+        <!-- 有 tabindex = "-1" 可以完全禁止 href 屬性-->
+        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+        <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>區塊級別按鈕</h1>
+    <h2>d-grid 作法</h2>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="button">Button</button>
+    </div>
+    <h2>d-flex 作法</h2>
+    <div class="d-flex flex-column">
+      <button class="btn btn-primary" type="button">Button</button>
+    </div>
+    <h2>.btn-block</h2>
+    <button class="btn btn-primary btn-block">Button</button>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>切換狀態</h1>
+    <h2>button 按鈕</h2>
+    <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
+    <button type="button" class="btn btn-primary active" data-bs-toggle="button">Active toggle button</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="button" disabled>Disabled toggle button</button>
+    <h2>將 a 當作按鈕</h2>
+    <a href="#" class="btn btn-primary active" data-bs-toggle="button">Toggle link</a>
+    <a href="#" class="btn btn-primary" data-bs-toggle="button">Active toggle link</a>
+    <a class="btn btn-primary disabled" data-bs-toggle="button">Disabled toggle link</a>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>用 bootstrap 的建構式來制定按鈕</h1>
+    <button id="mybutton" class="btn btn-primary">Bootstrap</button>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    // 抓哪個按鈕的 DOM 元素
+    const button = document.querySelector('#mybutton')
+    // 將這個 DOM 元素 new 出一個 bootstrap 的按鈕實體
+    const bsButton = new bootstrap.Button(button)
+    button.addEventListener('click', function () {
+      bsButton.toggle()
+    })
+  </script>
+</body>
+
+</html>

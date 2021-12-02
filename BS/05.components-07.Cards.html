@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h4 {
+      margin: 1rem 0;
+    }
+
+    .container {
+      margin-bottom: 2rem;
+    }
+
+    .content {
+      column-count: 2;
+      column-gap: 1.5rem;
+      column-rule: 3px double #aaa;
+    }
+
+    .content div {
+      padding: 1rem;
+    }
+
+    .content div::first-letter {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>卡片 (Cards)</h1>
+    <p>卡片是非常好用且常見的資訊容器，可以置放圖片、文字、按鈕或清單等等。主要資訊內容放在 .card-body，另外有圖片、.card-header、.card-footer 這幾個資訊區塊，
+      也很適合混用各種適當的元件。
+    </p>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://picsum.photos/800/500/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build
+              on the card title and make up the bulk of the card's content</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://picsum.photos/800/500/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://picsum.photos/800/500/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://picsum.photos/800/500/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://picsum.photos/800/500/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/800/500/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>混合樣式</h2>
+    <p>資訊區塊可以自由混合搭配</p>
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <img src="https://picsum.photos/800/500/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>圖片 overlay</h2>
+    <p>將圖片轉換為卡片背景，並疊加卡片的文字。 根據圖片，你可以選擇是否需要額外的樣式或通用類別。</p>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>.card-img-overlay</h3>
+        <div class="card bg-dark text-white h-100">
+          <img src="https://picsum.photos/1920/1080/?random=1" class="card-img" style="width:100%;height:100%;object-fit:cover">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut aliquid animi voluptas repudiandae dolores magni architecto, ab
+              aspernatur sequi temporibus dolor doloremque a, officia ipsum dolorum hic culpa quae rerum quasi maiores blanditiis quod laborum numquam
+              voluptate. Similique quisquam ducimus libero quod deleniti ab accusamus maiores natus soluta voluptatibus, earum impedit molestias quis voluptatum
+              illum voluptatem recusandae excepturi facilis. Quae, libero? Tempora sapiente impedit debitis facilis, beatae est, quia non iusto reprehenderit
+              vitae velit nobis aliquid mollitia, culpa fugit error rem eius id dolor voluptates animi hic suscipit ab. Dolor quidem eius veritatis similique
+              eos officiis, aspernatur officia? Ipsam quaerat enim voluptates esse fuga. Vero provident nesciunt adipisci, doloribus similique minima
+              consequatur corporis soluta quidem officia temporibus sint consectetur pariatur sapiente voluptas distinctio, itaque perferendis quis repudiandae
+              qui. Excepturi esse nesciunt impedit. Exercitationem autem, itaque corporis dicta ipsum, tenetur assumenda possimus aliquam alias accusamus
+              reiciendis voluptatum doloribus omnis harum iste error consequatur fuga beatae, vel ex. Animi eius, labore dolore ut consequatur perferendis,
+              blanditiis excepturi libero impedit, eveniet maxime magnam fugit sint praesentium. Quisquam recusandae quos iusto atque. Pariatur ex nemo,
+              officiis saepe praesentium esse asperiores tenetur at sed modi ratione provident? Ratione facilis natus fugiat, eos dolorum aperiam quas quos
+              libero nemo soluta, recusandae officiis ab? Repudiandae iste pariatur animi veritatis repellat nostrum facere totam. Explicabo odit minus possimus
+              excepturi architecto, quibusdam sit assumenda saepe vero provident, dolorum eaque facere fuga voluptatum est in blanditiis ducimus, sequi placeat
+              soluta consequatur recusandae impedit optio! Nulla assumenda cumque facere voluptatibus ipsam culpa, sint magnam ab veniam a eligendi,
+              reprehenderit voluptates praesentium alias suscipit iusto quaerat error accusantium odit laudantium? Ut, corrupti, eaque earum non cum repellendus
+              a et dolore molestiae vero animi eum sequi ex officia? Iste officiis error optio. Voluptate error totam voluptas similique animi facilis dolorem
+              ex sit? Est. reiciendis voluptatum doloribus omnis harum iste error consequatur fuga beatae, vel ex. Animi eius, labore dolore ut consequatur
+              perferendis,
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h3>background</h3>
+        <div class="card bg-dark text-white h-100">
+          <div class="card-body" style="background: url('https://picsum.photos/1920/1080/?random=1') no-repeat center/cover;">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut aliquid animi voluptas repudiandae dolores magni architecto, ab
+              aspernatur sequi temporibus dolor doloremque a, officia ipsum dolorum hic culpa quae rerum quasi maiores blanditiis quod laborum numquam
+              voluptate. Similique quisquam ducimus libero quod deleniti ab accusamus maiores natus soluta voluptatibus, earum impedit molestias quis voluptatum
+              illum voluptatem recusandae excepturi facilis. Quae, libero? Tempora sapiente impedit debitis facilis, beatae est, quia non iusto reprehenderit
+              vitae velit nobis aliquid mollitia, culpa fugit error rem eius id dolor voluptates animi hic suscipit ab. Dolor quidem eius veritatis similique
+              eos officiis, aspernatur officia? Ipsam quaerat enim voluptates esse fuga. Vero provident nesciunt adipisci, doloribus similique minima
+              consequatur corporis soluta quidem officia temporibus sint consectetur pariatur sapiente voluptas distinctio, itaque perferendis quis repudiandae
+              qui. Excepturi esse nesciunt impedit. Exercitationem autem, itaque corporis dicta ipsum, tenetur assumenda possimus aliquam alias accusamus
+              reiciendis voluptatum doloribus omnis harum iste error consequatur fuga beatae, vel ex. Animi eius, labore dolore ut consequatur perferendis,
+              blanditiis excepturi libero impedit, eveniet maxime magnam fugit sint praesentium. Quisquam recusandae quos iusto atque. Pariatur ex nemo,
+              officiis saepe praesentium esse asperiores tenetur at sed modi ratione provident? Ratione facilis natus fugiat, eos dolorum aperiam quas quos
+              libero nemo soluta, recusandae officiis ab? Repudiandae iste pariatur animi veritatis repellat nostrum facere totam. Explicabo odit minus possimus
+              excepturi architecto, quibusdam sit assumenda saepe vero provident, dolorum eaque facere fuga voluptatum est in blanditiis ducimus, sequi placeat
+              soluta consequatur recusandae impedit optio! Nulla assumenda cumque facere voluptatibus ipsam culpa, sint magnam ab veniam a eligendi,
+              reprehenderit voluptates praesentium alias suscipit iusto quaerat error accusantium odit laudantium? Ut, corrupti, eaque earum non cum repellendus
+              a et dolore molestiae vero animi eum sequi ex officia? Iste officiis error optio. Voluptate error totam voluptas similique animi facilis dolorem
+              ex sit? Est.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>水平卡片</h2>
+    <p>card 也可以使用網格來建立水平式卡片，例如設計最小尺寸排列，其他尺寸排列的卡片。.g-0 移除網格的 gutter。</p>
+    <div class="card mb-3" style="max-width: 800px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://picsum.photos/800/600/?random=1" class="img-fluid rounded-start" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit
+              longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>等高問題處理</h1>
+    <h2>使用卡片群組</h2>
+    <div class="card-group">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-sm-column">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-sm-column">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text mb-auto">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-sm-column">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer
+            content
+            than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </div>
+        <p class="card-text ms-3"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <p class="card-text ms-3"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer
+            content
+            than the first to show that equal height action.</p>
+        </div>
+        <p class="card-text ms-3"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card-group gap-3 ">
+      <div class="card border">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+          </p>
+        </div>
+        <div class="card-footer bg-transparent border-top-0">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card border">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer bg-transparent border-top-0">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card border">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content
+            than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer bg-transparent border-top-0">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>網格卡片</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-2 g-xl-3">
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit
+              longer.</p>
+          </div>
+          <button class="btn btn-primary align-self-start">Button</button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit
+              longer.</p>
+          </div>
+          <button class="btn btn-primary align-self-center">Button</button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit
+              longer.</p>
+          </div>
+          <button class="btn btn-primary align-self-end">Button</button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit
+              longer.</p>
+          </div>
+          <button class="btn btn-primary">Button</button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit
+              longer.</p>
+          </div>
+          <button class="btn btn-primary">Button</button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit
+              longer.</p>
+          </div>
+          <button class="btn btn-primary">Button</button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit
+              longer.</p>
+          </div>
+          <button class="btn btn-primary">Button</button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit
+              longer.</p>
+          </div>
+          <button class="btn btn-primary">Button</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h4>書籍排版的 column-count</h4>
+    <div class="content">
+      <div>
+        <div class="float-start">
+          <img src="https://picsum.photos/150/150/?random=1">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quasi dicta? Possimus maiores doloribus, est eligendi odio ipsa suscipit vitae amet
+          deleniti ex sit ad delectus iure blanditiis voluptatem cupiditate nihil? Tempore iusto ad quod odit illo saepe earum nisi hic, vel velit id? Quo quia
+          provident, sunt autem nisi fugit animi eaque accusamus culpa iste cupiditate iusto, magnam mollitia error beatae repudiandae nihil vitae eius, non
+          ipsum enim nesciunt facilis tempore! Iste, voluptatum nam hic qui ipsa quas, iure quidem suscipit quae dolore nisi, id delectus magni tempora
+          consequuntur adipisci est sit ad ipsam cum quo sunt quos quis.</p>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam blanditiis numquam adipisci sunt consequatur tempore quia velit dolorem, consequuntur
+          cumque, nihil nisi dignissimos vero? Eius, nisi ipsa veniam aliquid laudantium dolore, sint itaque nulla, qui porro explicabo quam tempora. Repellat
+          quae voluptatem quod perferendis reiciendis temporibus nihil! Deleniti ea ratione eius numquam hic voluptatibus error, tenetur pariatur quae.
+          Accusantium, pariatur. Rem necessitatibus aspernatur aut, dolorum voluptas facere unde. Perspiciatis placeat, voluptas modi quae nam in ab voluptate
+          itaque quam iusto pariatur voluptates laborum iure optio quod quia facilis, odio, veritatis sed. Reprehenderit explicabo, quis optio et iste delectus
+          repudiandae animi libero, magnam minus alias distinctio corporis dolores ipsam voluptates perspiciatis incidunt ducimus velit sint. Ipsa voluptate
+          molestias neque repudiandae culpa quam fugiat iste quos unde aliquid. Natus, alias quos molestias nihil cum iure eos, labore minus, eum obcaecati
+          exercitationem animi accusantium placeat ab eveniet veritatis error sapiente? Totam, dolor repellat.
+        </p>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus reprehenderit, deserunt labore, molestias ab repudiandae inventore excepturi
+          suscipit quasi iusto commodi. Officiis, ad. Doloribus voluptates unde nisi omnis eius possimus corporis distinctio deleniti? Quisquam, tempora quia
+          laudantium odio ipsam blanditiis quod maxime ab esse labore incidunt ullam adipisci nisi consequuntur! Sint, nesciunt consequatur illum aliquid
+          officia aut eaque veritatis labore repudiandae beatae, explicabo quia voluptas provident incidunt qui quisquam nobis suscipit impedit dolore obcaecati
+          id ullam odit. Eius, ab asperiores.
+        </p>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia asperiores ratione, sunt omnis delectus veniam optio quos ea commodi totam animi,
+          voluptatum tenetur. Perferendis minus officiis laboriosam numquam. Similique, magni quam eligendi nisi, repudiandae reiciendis quibusdam molestiae
+          harum quidem molestias obcaecati porro officiis reprehenderit, maiores labore omnis ut fugiat distinctio necessitatibus ab. Doloremque porro debitis
+          cupiditate laudantium neque magnam dolores delectus amet nobis dolorum id quasi libero possimus recusandae assumenda odit accusantium a dolor optio,
+          ipsam maxime. Tenetur dolorum qui sunt quod? Eos magnam molestiae nam, eaque nulla quis accusamus libero ipsa facere adipisci porro aperiam illum
+          perspiciatis? Rerum, nam magni molestiae suscipit, pariatur optio veritatis culpa quos vero nihil dolorem perspiciatis nemo sunt nobis placeat sint
+          expedita. Sit, voluptates.</p>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-6">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint est vitae dolore praesentium, blanditiis nemo ratione asperiores natus culpa
+            voluptatibus quasi eos vero itaque impedit quia, dolores earum minus officiis, in esse eius expedita dignissimos laborum tenetur. Eligendi provident
+          </div>
+          <div class="col-6">
+            <img src="https://picsum.photos/300/300/?random=1">
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, totam doloremque molestias libero sit beatae rerum perspiciatis, laudantium, est et
+          voluptatem id. Et architecto fugiat deleniti nostrum, laudantium praesentium aliquid officia eveniet sint illo, natus libero sit porro magni omnis
+          reiciendis soluta consequatur mollitia corporis adipisci! Est, culpa deserunt? Cumque incidunt molestiae saepe in assumenda, officiis fugit deserunt
+          labore repudiandae voluptates provident consequatur aperiam, consectetur facilis explicabo. Repellendus maiores iusto doloribus nobis recusandae
+          voluptate consequuntur provident unde temporibus facilis quisquam a adipisci, dolores, non soluta exercitationem quaerat mollitia! Corrupti eius neque
+          odit dicta consequatur sint ipsum placeat consectetur dignissimos odio!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

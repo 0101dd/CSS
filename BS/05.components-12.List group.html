@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    /* 第一層 */
+    ul.myCounter {
+      /* 重置第一層計數器，設定 indentifer 識別字 number-lv-1  */
+      counter-reset: number-lv-1;
+    }
+
+    ul.myCounter>li::before {
+      /* 設定識別字 */
+      content: counter(number-lv-1) ". ";
+      counter-increment: number-lv-1;
+    }
+
+    /* 第二層 */
+    ul.myCounter ul {
+      counter-reset: number-lv-2;
+    }
+
+    ul.myCounter ul>li::before {
+      content: counter(number-lv-1) "-"counter(number-lv-2) ". ";
+      counter-increment: number-lv-2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>編號</h2>
+    <p>添加 .list-group-numbered 類別可以替清單新增一組編號。</p>
+    <ol class="list-group list-group-numbered">
+      <li class="list-group-item">A list item</li>
+      <li class="list-group-item">A list item</li>
+      <li class="list-group-item">A list item</li>
+    </ol>
+    <h3>CSS 的 counter-increment 屬性</h3>
+    <p>CSS 的計數器，用在流水號，或是在章節編號</p>
+    <ul class="myCounter list-unstyled">
+      <li>HTML</li>
+      <li>CSS
+        <ul>
+          <li>基礎選擇器、文字、背景</li>
+          <li>盒模型、定位、浮動</li>
+          <li>轉場、動畫</li>
+        </ul>
+      </li>
+      <li>JavaScript</li>
+    </ul>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

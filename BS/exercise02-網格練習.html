@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    * {
+      transition: 0.5s;
+    }
+
+    section {
+      background: linear-gradient(rgba(255, 255, 255, .75), rgba(255, 255, 255, .75)), url("https://picsum.photos/1920/1080/?random=1") no-repeat center/cover;
+    }
+
+    .item:hover {
+      box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.5);
+      transform: translateY(-10px);
+    }
+
+    .item:hover img {
+      transform: scale(1.2);
+    }
+
+    .item .img {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="container py-3 py-md-5">
+      <h1 class="text-center fw-bold">活動專區</h1>
+      <p class="text-center h5 mb-4"><a class="text-decoration-none fw-bold link-primary" href="#">查看所有熱門活動列表 &gt;</a></p>
+      <div class="row gy-3 gx-md-3">
+        <div class="col-md-4">
+          <div class="item">
+            <div class="img">
+              <img class="img-fluid" src="https://picsum.photos/500/400/?random=1">
+            </div>
+            <p class="bg-light p-3">這款選擇虛擬結果什麼事大眾給我反覆階段一道不良，爸爸主要好友同步最佳，通信諾基亞只見是個感染成本網。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item">
+            <div class="img">
+              <img class="img-fluid" src="https://picsum.photos/500/400/?random=2">
+            </div>
+            <p class="bg-light p-3">這款選擇虛擬結果什麼事大眾給我反覆階段一道不良，爸爸主要好友同步最佳，通信諾基亞只見是個感染成本網。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item">
+            <div class="img">
+              <img class="img-fluid" src="https://picsum.photos/500/400/?random=3">
+            </div>
+            <p class="bg-light p-3">這款選擇虛擬結果什麼事大眾給我反覆階段一道不良，爸爸主要好友同步最佳，通信諾基亞只見是個感染成本網。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

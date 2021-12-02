@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>手風琴 (Accordion)</h1>
+    <p>當商品項目或條列選項過多時，需要更多空間來置放內容，可以使用手風琴呈現。</p>
+    <div class="row">
+      <div class="col-4">
+        <div class="accordion" id="kaifu">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <!-- data-bs-toggle 表示要觸發一個功能叫做 collapse -->
+              <!-- data-bs-target 表示摺疊目標的 id 名稱 -->
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#kaifu_collapse_01">
+                奇幻冒險系列
+              </button>
+            </h2>
+            <!-- data-bs-parent = '#id' 對應到該 .accordion 的 id，這個範例是 kaifu -->
+            <div id="kaifu_collapse_01" class="accordion-collapse collapse" data-bs-parent="#kaifu">
+              <div class="accordion-body">
+                <ul>
+                  <li>鬼滅之刃</li>
+                  <li>海賊王</li>
+                  <li>火影忍者</li>
+                  <li>獵人</li>
+                  <li>死神</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kaifu_collapse_02">
+                運動學園系列
+              </button>
+            </h2>
+            <div id="kaifu_collapse_02" class="accordion-collapse collapse show" data-bs-parent="#kaifu">
+              <div class="accordion-body">
+                <ul>
+                  <li>灌籃高手</li>
+                  <li>足球隊長小翼</li>
+                  <li>排球少年</li>
+                  <li>第一神拳</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kaifu_collapse_03">
+                鋼鐵肌肉系列
+              </button>
+            </h2>
+            <div id="kaifu_collapse_03" class="accordion-collapse collapse" data-bs-parent="#kaifu">
+              <div class="accordion-body">
+                <ul>
+                  <li>北斗神拳</li>
+                  <li>JOJO 冒險野郎</li>
+                  <li>魁男塾</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <p>評分我一保密一塊像素推坑王如何，幫你實現不明白，不但做好坐在追求深入造成採訪授權公共獨特記住作品存在計劃除了，批准雜誌望着空調背景，會在會計生命就能我家首頁石油陽明山超市兩人許多，不是持續規格穿著怎麼辦組合之處便宜奧客，工作人員任何人妻子書庫，引起說話早。</p>
+        <p>評分我一保密一塊像素推坑王如何，幫你實現不明白，不但做好坐在追求深入造成採訪授權公共獨特記住作品存在計劃除了，批准雜誌望着空調背景，會在會計生命就能我家首頁石油陽明山超市兩人許多，不是持續規格穿著怎麼辦組合之處便宜奧客，工作人員任何人妻子書庫，引起說話早。</p>
+        <p>評分我一保密一塊像素推坑王如何，幫你實現不明白，不但做好坐在追求深入造成採訪授權公共獨特記住作品存在計劃除了，批准雜誌望着空調背景，會在會計生命就能我家首頁石油陽明山超市兩人許多，不是持續規格穿著怎麼辦組合之處便宜奧客，工作人員任何人妻子書庫，引起說話早。</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>Flush</h1>
+    <p>加上 .accordion-flush 來移除預設 background-color、 外框和圓角使該手風琴能和父容器緊鄰。</p>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                  aria-controls="flush-collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is
+            the first item's accordion body.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                  aria-controls="flush-collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is
+            the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                  aria-controls="flush-collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is
+            the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least
+            at first glance, a bit more representative of how this would look in a real-world application.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h1>總是開啟</h1>
+    <p>省略每個在 .accordion-collapse 上的 data-bs-parent 屬性，使 accordion item 在打開另一個 item 時保持打開狀態。</p>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <!-- 省略每個在 .accordion-collapse 上的 data-bs-parent 屬性，總是打開著 -->
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use
+            to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+            this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we
+            use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any
+            of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we
+            use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any
+            of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

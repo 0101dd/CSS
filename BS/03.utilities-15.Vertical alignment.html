@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h2,
+    h3 {
+      margin: 20px 0;
+    }
+
+    .box {
+      background: #333;
+    }
+
+    span {
+      display: inline-block;
+      text-align: center;
+      line-height: 100px;
+      width: 150px;
+      height: 100px;
+      background: rebeccapurple;
+    }
+
+    table,
+    td {
+      border: 1px solid white;
+    }
+
+    .vl {
+      vertical-align: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>垂直對齊 (Vertical alignment)</h1>
+    <p>vertical-align 屬性使用在 inline 元素、圖片或是 td 的垂直對齊。</p>
+
+    <h2>inline 或 inline-block</h2>
+    <div class="box text-white">
+      <span class="align-baseline">baseline</span>
+      <span class="align-middle">middle</span>
+      <span class="align-top">top</span>
+      <span class="align-bottom">bottom</span>
+      <span class="align-text-top">text-top</span>
+      <span class="align-text-bottom">text-bottom</span>
+      <span class="vl">lorem</span>
+
+      <h2>table</h2>
+      <table class="bg-primary text-white" style="height: 100px;">
+        <tbody>
+          <tr>
+            <td class="align-baseline">baseline</td>
+            <td class="align-top">top</td>
+            <td class="align-middle">middle</td>
+            <td class="align-bottom">bottom</td>
+            <td class="align-text-top">text-top</td>
+            <td class="align-text-bottom">text-bottom</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>圖片底部空白問題</h2>
+      <p>Bootstrap 已經將圖片設定 vertical-align: middle，底部不會有空白的問題。自己排版如果底部有空白，可以將 vertical-align 設定成非 baseline 的值。</p>
+      <div class="bg-secondary">
+        <img src="https://picsum.photos/150/150/?random=1">
+        <img src="https://picsum.photos/150/150/?random=1">
+        <img src="https://picsum.photos/150/150/?random=1">
+        <img src="https://picsum.photos/150/150/?random=1">
+        <img src="https://picsum.photos/150/150/?random=1">
+        <img src="https://picsum.photos/150/150/?random=1">
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

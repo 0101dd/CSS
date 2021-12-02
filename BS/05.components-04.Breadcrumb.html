@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .breadcrumb-divider-1 {
+      --bs-breadcrumb-divider: ">";
+    }
+
+    .breadcrumb-divider-2 {
+      --bs-breadcrumb-divider: "\2192";
+    }
+
+    /*
+      base64 圖片編碼字串
+      優點：因為是字串，下載不需要發送圖片的請求，可減少下載時間，更快看到結果
+      缺點：也是因為編碼字串，越複雜檔案越大，base64 碼會越長
+      建議使用在簡單的 icon
+    */
+    .breadcrumb-divider-3 {
+      --bs-breadcrumb-divider: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAXQAAAF0BVWAulAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADySURBVDiNjdOxLkRBFMbx393EbrGNgobGJhqPsCJ6vQeg9RRqhSfwAFrBaiUSttMQFQ3PoBAxCnOTY7J3dyaZ5vy/+eacmXNgiG00KSXtzvEHTLEZWaFzh4RLLAUwzvGE9y4TeArCc/QyaHCxyAR28RmEZ2056OfMOk1alz18BeFpuKGPqy6TmMo+voPwOLABrmeZlPUc4icIjwqTSWky61VPoqhgA9wEPu0Jq2maLRyE0K1FK7iP8BHc7zGsKgFreA3wEctVj4gVPAf4gtXqb/S/296wXhye30j5UMr1jwKobuUdf1+3UYC6YZozplXj/AuR8mz/43EDigAAAABJRU5ErkJggg==');
+      filter: invert(54%) sepia(85%) saturate(4154%) hue-rotate(164deg) brightness(99%) contrast(101%);
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+      margin-top: -1px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>麵包屑 (Breadcrumb)</h1>
+    <p>紀錄網站路徑到目前的位置。</p>
+
+    <h2>1. 直接修改文字</h2>
+    <nav>
+      <ol class="breadcrumb breadcrumb-divider-1">
+        <li class="breadcrumb-item"><a href="#">首頁</a></li>
+        <li class="breadcrumb-item"><a href="#">運動用品</a></li>
+        <li class="breadcrumb-item active"><a href="#">慢跑鞋</a></li>
+      </ol>
+    </nav>
+
+    <h2>2. <a href="https://unicode-table.com/en/">使用 unicode</a></h2>
+    <nav>
+      <ol class="breadcrumb breadcrumb-divider-2">
+        <li class="breadcrumb-item"><a href="#">首頁</a></li>
+        <li class="breadcrumb-item"><a href="#">運動用品</a></li>
+        <li class="breadcrumb-item active"><a href="#">慢跑鞋</a></li>
+      </ol>
+    </nav>
+
+    <h2>3. <a href="https://www.base64-image.de/">使用 base64</a></h2>
+    <p>png to base64</p>
+    <p>svg to base64</p>
+    <nav>
+      <ol class="breadcrumb breadcrumb-divider-3">
+        <li class="breadcrumb-item"><a href="#">首頁</a></li>
+        <li class="breadcrumb-item"><a href="#">運動用品</a></li>
+        <li class="breadcrumb-item active"><a href="#">慢跑鞋</a></li>
+      </ol>
+    </nav>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

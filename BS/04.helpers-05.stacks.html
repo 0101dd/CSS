@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h2,
+    h3,
+    h5 {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>堆疊 (Stacks)</h1>
+    <h2>垂直</h2>
+    <p>使用 .vstack 垂直排版。預設情況下，堆疊項目是滿寬的。使用 .gap-* 通用類別在元素間增加間距。</p>
+    <div class="vstack gap-3 gap-lg-5">
+      <div class="bg-light border">First item</div>
+      <div class="bg-light border">Second item</div>
+      <div class="bg-light border">Third item</div>
+    </div>
+    <h5>等同以下</h5>
+    <div class="d-flex flex-column flex-fill align-self-lg-stretch gap-3 gap-lg-5">
+      <div class="bg-light border">First item</div>
+      <div class="bg-light border">Second item</div>
+      <div class="bg-light border">Third item</div>
+    </div>
+
+    <h2>水平</h2>
+    <p>使用 .hstack 水平排版。預設情況下，堆疊項目垂直置中並且只佔用必要的寬度。使用 .gap-* 通用類別在元素間增加間距。</p>
+    <div class="hstack gap-3">
+      <div class="bg-light border">First item</div>
+      <div class="bg-light border">Second item</div>
+      <div class="bg-light border">Third item</div>
+    </div>
+    <h5>等同以下</h5>
+    <div class="d-flex flex-fill align-items-center align-self-lg-stretch gap-3">
+      <div class="bg-light border">First item</div>
+      <div class="bg-light border">Second item</div>
+      <div class="bg-light border">Third item</div>
+    </div>
+
+
+
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

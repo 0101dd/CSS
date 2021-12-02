@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    /* 改變動畫速率 */
+    /* https://easings.net/ */
+    /* https://matthewlein.com/tools/ceaser */
+    .carousel-item {
+      transition: 2s all cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    #kaifu .carousel-control-prev {
+      background: linear-gradient(90deg, rgba(0, 0, 0, .75), transparent);
+    }
+
+    #kaifu .carousel-control-next {
+      background: linear-gradient(270deg, rgba(0, 0, 0, .75), transparent);
+    }
+
+    #kaifu .carousel-indicators [data-bs-target] {
+      height: 30px;
+      border-radius: 50%;
+      text-indent: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>輪播 (Carousel)</h1>
+    <!-- 為輪播設置一個 id，這邊是 kaifu，並且設置左、右箭頭和指示器的 data-bs-target="#kaifu" -->
+    <!-- .carousel-fade 將滑動變成淡入、淡出效果 -->
+    <!-- .carousel-dark 深色模式，文字會變成黑色 -->
+    <!-- data-bs-interval 為每張圖片延遲的時間 -->
+    <!-- data-bs-touch="true" 設定行動裝置可以觸控滑動 -->
+    <div id="kaifu" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-touch="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#kaifu" data-bs-slide-to="0" class="active">1</button>
+        <button type="button" data-bs-target="#kaifu" data-bs-slide-to="1">2</button>
+        <button type="button" data-bs-target="#kaifu" data-bs-slide-to="2">3</button>
+        <button type="button" data-bs-target="#kaifu" data-bs-slide-to="3">4</button>
+        <button type="button" data-bs-target="#kaifu" data-bs-slide-to="4">5</button>
+      </div>
+      <div class="carousel-inner">
+        <!-- 可以各別指定 .carousel-item 的 data-bs-interval 延遲轉場時間 -->
+        <div class="carousel-item active">
+          <!-- .d-block w-100 可以讓圖片占滿整個父元素 -->
+          <img src="https://picsum.photos/1920/600/?random=1" class="d-block w-100">
+          <!-- 指定標題各斷點是否顯示 -->
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1920/600/?random=2" class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1920/600/?random=3" class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1920/600/?random=4" class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Fourth slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1920/600/?random=5" class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Fifth slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 上一張按鈕，id 需跟輪播圖一樣，這裡是 kaifu -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#kaifu" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <!-- 下一張按鈕，id 需跟輪播圖一樣，這裡是 kaifu -->
+      <button class="carousel-control-next" type="button" data-bs-target="#kaifu" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

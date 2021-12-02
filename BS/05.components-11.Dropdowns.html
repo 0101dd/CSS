@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./icons/bootstrap-icons.css">
+  <style>
+    body {
+      padding-bottom: 500px;
+    }
+
+    .container {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>下拉選單 (Dropdowns)</h1>
+    <p>data-bs-toggle="dropdown" 來處發起用下拉選單。</p>
+    <h2>單一按鈕</h2>
+    <div class="row">
+      <div class="col-auto">
+        <p>使用 Button 觸發</p>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <span class="dropdown-header text-primary fw-bold fs-6">前端技術</span>
+            </li>
+            <!-- 增加 .active 讓該選項變成啟用狀態 -->
+            <li><a class="dropdown-item active" href="#">HTML</a></li>
+            <li><a class="dropdown-item" href="#">CSS</a></li>
+            <li><a class="dropdown-item" href="#">JavaScript</a></li>
+            <li>
+              <!-- 分隔線 -->
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <span class="dropdown-header text-primary fw-bold fs-6">後端技術</span>
+            </li>
+            <!-- .disabled 禁用狀態 -->
+            <li><a class="dropdown-item disabled" href="#">PHP</a></li>
+            <li><a class="dropdown-item disabled" href="#">MySQL</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-auto">
+        <p>使用 a 元素觸發</p>
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>分割按鈕</h2>
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger">Action</button>
+      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>深色下拉選單</h2>
+    <p>在 .dropdown-menu 增加 .dropdown-menu-dark 類別可以下拉深色模式選單。</p>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" ata-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item active" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>方向</h2>
+    <div class="row">
+      <div class="col">
+        <h5>往下(預設)不需加 class</h5>
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropup
+          </button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">一遍預覽禮品</li>
+            <li class="dropdown-item">一遍預覽禮品</li>
+            <li class="dropdown-item">一遍預覽禮品</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <h5>往上 .dropup</h5>
+        <div class="btn-group dropup">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropup
+          </button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">一遍預覽禮品</li>
+            <li class="dropdown-item">一遍預覽禮品</li>
+            <li class="dropdown-item">一遍預覽禮品</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <h5>往右</h5>
+        <div class="btn-group dropend">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropup
+          </button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">一遍預覽禮品</li>
+            <li class="dropdown-item">一遍預覽禮品</li>
+            <li class="dropdown-item">一遍預覽禮品</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <h5>往左</h5>
+        <div class="btn-group dropstart">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropup
+          </button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">一遍預覽禮品</li>
+            <li class="dropdown-item">一遍預覽禮品</li>
+            <li class="dropdown-item">一遍預覽禮品</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>選單對齊</h2>
+    <div class="row">
+      <div class="col-auto">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+            .dropdown-menu-end 選單靠右
+          </button>
+          <!-- .dropdown-menu-end -->
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><button class="dropdown-item" type="button">Action</button></li>
+            <li><button class="dropdown-item" type="button">Another action</button></li>
+            <li><button class="dropdown-item" type="button">Something else here</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+            .dropdown-menu-start 選單靠左
+          </button>
+          <!-- .dropdown-menu-start -->
+          <ul class="dropdown-menu dropdown-menu-start">
+            <li><button class="dropdown-item" type="button">Action</button></li>
+            <li><button class="dropdown-item" type="button">Another action</button></li>
+            <li><button class="dropdown-item" type="button">Something else here</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+            .dropdown-menu-start 選單靠左
+          </button>
+          <!-- .dropdown-menu-{breakpoint}-start、.dropdown-menu-{breakpoint}-end -->
+          <ul class="dropdown-menu dropdown-menu-sm-start dropdown-menu-lg-end dropdown-menu-xl-start">
+            <li><button class="dropdown-item" type="button">Action</button></li>
+            <li><button class="dropdown-item" type="button">Another action</button></li>
+            <li><button class="dropdown-item" type="button">Something else here</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>下拉選單與表單</h2>
+    <div id="register" class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+        <i class="bi bi-person"></i> 登入</a>
+      <div class="dropdown-menu">
+        <form class="px-4 py-3">
+          <div class="mb-3">
+            <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="dropdownCheck">
+              <label class="form-check-label" for="dropdownCheck">
+                Remember me
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">New around here? Sign up</a>
+        <a class="dropdown-item" href="#">Forgot password?</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>下拉選單的選項</h2>
+    <p>使用 data-bs-offset 或 data-bs-reference 來改變下拉選單的位置。</p>
+    <div class="d-flex">
+      <div class="dropdown me-1">
+        <!-- data-bs-offset 設定為移，第一個數字為水平位移量，第二個數字為垂直位移量 -->
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-offset="10,20">
+          Offset
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary">Reference</button>
+        <!-- 不設定 data-bs-reference="parent" 會以自身按鈕位置對齊 -->
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" data-bs-reference="parent">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>自動關閉行為</h2>
+    <p>預設情況下，在下拉選單內部或外部點擊時會關閉下拉選單。你可以使用 autoClose 選項來更改下拉選單的這種行為。</p>
+    <div class="row">
+      <div class="col-auto">
+        <div class="btn-group">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true">
+            Default dropdown
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="btn-group">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside">
+            Clickable outside
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="btn-group">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+            Clickable inside
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="btn-group">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false">
+            Manual close
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

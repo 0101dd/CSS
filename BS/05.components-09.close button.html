@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>關閉按鈕 (Close button)</h1>
+    <p>透過 .btn-close 以關閉或解除元件。預設的樣式有限，但可高度客製化。修改 Sass 變數以替換預設的 background-image。請確保有在 aria-label 替螢幕閱讀器加入文字。</p>
+    <button type="button" class="btn-close" aria-label="Close"></button>
+
+    <h2>禁用狀態</h2>
+    <p>禁用關閉按鈕將會改變它的 opacity。我們同時應用了 pointer-events: none 和 user-select: none 以避免觸發滑入、啟用等狀態。</p>
+
+    <h2>白色系變化</h2>
+    <p>透過 .btn-close-white 類別將預設的 .btn-close 改為白色。此種類別使用 filter 屬性以反轉 background-image。</p>
+    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white" disabled aria-label="Close"></button>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

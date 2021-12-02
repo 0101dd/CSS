@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <!-- animate.css -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css' />
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .animate__duration {
+      animation-duration: .5s;
+    }
+
+    /* 修改 transition-duration 可以更改淡入、淡出時間 */
+    .fade {
+      transition-duration: .5s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>互動視窗 (Modal)</h1>
+    <h2>觸發按鈕</h2>
+    <ul>
+      <li>可以使用 button 或 a 元素觸發 modal 視窗，並啟動 data-bs-toggle="modal" 效果。</li>
+      <li>兩者觸發需對應 modal 主體的 id。</li>
+      <li>使用 button 時，在 data-bs-target 設定 id。</li>
+      <li>使用 a 時，設定 href="#id"</li>
+    </ul>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kaifu">
+          使用 button 觸發 modal 視窗
+        </button>
+        <a href="#kaifu" class="btn btn-primary" data-bs-toggle="modal">
+          使用 a 觸發 modal 視窗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 主體 ------------------------------------------------------------------------------------------------>
+  <!--
+    .fade 淡入、淡出轉場效果
+    data-bs-backdrop="static" 可鎖定背景，點擊背景時不會自動關閉 modal，一定要點關閉按鈕或是 x。
+  -->
+  <div class="modal fade" id="kaifu" data-bs-backdrop="static">
+    <!-- .modal-dialog-centered 可讓互動視窗垂直置中 -->
+    <!-- .modal-dialog-scrollable 可創建一個滾動的互動視窗 -->
+    <!-- 調整視窗大小，.modal-xl(1140px)、modal-lg(800px)、modal-sm(300px)、沒寫是 500px -->
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">互動視窗</h5>
+          <!--  data-bs-dismiss="modal" 關閉互動視窗 -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            作用尤其是好多較大發出，名字領導一番共享失望全面以往不可以很少其他資料，冠軍我把的說女人三人財富產品不可開放教育活動寂寞抓住成果完了，說什麼在於房產對面這時像是民主，不少魯蛇初步甚至同志見過解壓自身高雄可以用綠色見到看出年齡，緊急廠家二手，職工家園一本正是反饋手機鈴聲，我還就不提醒，來的一口氣，美女完整再也規劃山西喜愛作品參觀多種，軍事安裝結束依靠高中股票預測沒人職業寫出來網路只好追求，加盟的確本網站顧客，然後高度日前提示訊息生產由於更是，恐怖是有，明星領先全體固定發達原則生日，第一章員工廠商男女見過容量這就是經過結婚推薦使用，信號找到，矛盾女朋友都能能否版權所有設定，還在無聊調查持續，維護。
+          </p>
+          <!-- 可以搭配網格使用 -->
+          <div class="row">
+            <div class="col-6">
+              <img class="w-100 h-100" src="https://picsum.photos/1920/600/?random=1" style="object-fit: cover;">
+            </div>
+            <div class="col-6">
+              <p>
+                執行時間提升聯繫方式當我語音是以策略很多人國際他說，評分怪物網路演唱當你沒有什麼無限深刻及其本次恐怖走到可以用，照顧所以信譽世界盃高雄明年女生定位高雄獲取一生蔬菜，收益五年行情正確反正整理分類體制速度個人最為，不少視頻並且最佳連接體育計算你不簡介加拿大，評論鎖定行政工資類別資料庫化工科學不但欣賞，每一個大部分研發首次高校頻道人才威脅，即使差距夢想交給，本地下載期限房產律師爆炸目前一生，全家新聞我真有什麼站點終於快速造成策劃容量活力一臉同志，添加台中醫藥細節企業和他鄉民歌手更新一片實際文化錯誤溫暖，資訊網予以長度教師狀況費用調整共同下降前來承擔可能會很大，不再還在，提問點頭就是，在他谷歌漂亮筆記本及其數碼，隨後加上有所光碟瞭解打造退出逐步請點擊有時候主人臉上，真正回來他人新聞房子設定桌面收到，高手飲食考察最好，小時總結手裡恐怕活動明星畢業太麻里高中一流距離思考演出，高雄她們，最好的因為很快篇文章美好求助街道網咖條款管理帶來藥物取消，微軟奇怪這位物業雙方初音成績什麼事，開通工人它的機關對他沒事卻是而來來自此次大全西部下載次數轉讓，力量失去房價有個，長大又有精選模組僅僅，小子美元報導同學會。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!--  data-bs-dismiss="modal" 關閉互動視窗 -->
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>不同的互動視窗內容</h2>
+    <p>有數個按鈕要用來觸發相同互動視窗，但會導入不同內容？ 使用 event.relatedTarget 和 HTML data-bs-* 屬性 依據點擊按鈕來更改動態視窗的內容。</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for
+      @getbootstrap</button>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>在互動視窗間切換</h2>
+    <p>通過設定 data-bs-target 和 data-bs-toggle 屬性在多個互動視窗中切換。例如，你可以從已經打開的登錄視窗中切換為重新設定密碼的視窗。請注意不能同時打開多個互動視窗—這種方法只是在兩個單獨的互動視窗之間切換。</p>
+    <a class="btn btn-primary" data-bs-toggle="modal" href="#firstModal" role="button">Open first modal</a>
+    <!-- modal1 -->
+    <div class="modal fade" id="firstModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal 1</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Show a second modal and hide this one with the button below.
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#secondModal" data-bs-toggle="modal">Open second modal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal2 -->
+    <div class="modal fade" id="secondModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal 2</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Hide this modal and show the first with the button below.
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#firstModal" data-bs-toggle="modal">Back to first</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>滿版互動視窗</h2>
+    <p>.modal-dialog 新增 .modal-fullscreen 系列 class 可讓互動視窗滿版</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreen">Full screen</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenSm">Full screen below sm</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenMd">Full screen below md</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenLg">Full screen below lg</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenXl">Full screen below xl</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenXxl">Full screen below xxl</button>
+  </div>
+
+  <!-- .modal-fullscreen 總是滿版 -->
+  <div class="modal fade" id="fullscreen">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- .modal-fullscreen-sm-down => sm 以下滿版-->
+  <div class="modal fade" id="fullscreenSm">
+    <div class="modal-dialog modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- .modal-fullscreen-md-down => md 以下滿版-->
+  <div class="modal fade" id="fullscreenMd">
+    <div class="modal-dialog modal-fullscreen-md-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- .modal-fullscreen-lg-down => lg 以下滿版-->
+  <div class="modal fade" id="fullscreenLg">
+    <div class="modal-dialog modal-fullscreen-lg-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- .modal-fullscreen-xl-down => xl 以下滿版-->
+  <div class="modal fade" id="fullscreenXl">
+    <div class="modal-dialog modal-fullscreen-xl-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- .modal-fullscreen-xxl-down => xxl 以下滿版-->
+  <div class="modal fade" id="fullscreenXxl">
+    <div class="modal-dialog modal-fullscreen-xxl-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    // 抓 DOM
+    var exampleModal = document.getElementById('exampleModal')
+
+    exampleModal.addEventListener('show.bs.modal', function (event) {
+      // relatedTarget 為相對觸發者，也就是按紐
+      var button = event.relatedTarget
+      // 取得按鈕 data-bs-whatever 的值
+      var recipient = button.getAttribute('data-bs-whatever')
+      // 抓 .modal-title 
+      var modalTitle = exampleModal.querySelector('.modal-title')
+      // 抓 .modal-body input
+      var modalBodyInput = exampleModal.querySelector('.modal-body input')
+      modalTitle.textContent = 'New message to ' + recipient
+      modalBodyInput.value = recipient
+    })
+
+    // 改變進出場動畫
+    const kaifu = document.querySelector('#kaifu')
+    const dialog = document.querySelector('#kaifu .modal-dialog')
+    kaifu.addEventListener('show.bs.modal', function (e) {
+      goAnimation('animate__zoomOutUp', 'animate__zoomInDown')
+    })
+    kaifu.addEventListener('hide.bs.modal', function (e) {
+      goAnimation('animate__zoomInDown', 'animate__zoomOutUp')
+    })
+
+    function goAnimation(removeAnimation, addAnimation) {
+      // 只移除指定的 class
+      dialog.classList.remove(removeAnimation)
+      // 只新增想要增加的 class
+      dialog.classList.add('animate__animated', addAnimation, 'animate__duration')
+    }
+  </script>
+</body>
+
+</html>

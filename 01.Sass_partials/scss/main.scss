@@ -1,0 +1,24 @@
+// Partials 概念指拆分 SCSS 檔案再組合成自己的 Sass 結構
+// 1. 在 Sass 中會以底線 _ 開頭的方式來為 partials 檔案命名，例如 _variables.scss，Sass 會自己判斷檔案是否為 partials。
+// 2. Partials 模組結構化的概念可將各種功能獨立出 scss，再被一支主要的 scss 檔引入。
+// 3. Partials 的底線、副檔名在使用 @import 時不需寫，Partials 不會被匯出成 CSS 檔。
+// 4. Partials 的載入順序很重要，例如: functions、variables、mixins 都會被優先載入。
+
+// 函式
+@import 'functions';
+
+// 變數
+@import 'variables';
+
+// 混入
+@import 'mixins';
+
+// 重置
+@import 'reset';
+
+// 組件
+@import 'components';
+
+.color {
+  color: $primary;
+}

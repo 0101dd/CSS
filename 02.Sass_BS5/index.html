@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>自訂義</h1>
+    <h2>色彩</h2>
+    <p>修改 $theme-color 物件，可自訂或修改主題顏色。主題色即是 .btn-primary、.text-primary...這系列的 class。</p>
+    <h3>自訂主題色 - coffee</h3>
+    <button class="btn btn-coffee-dark">Button</button>
+    <button class="btn btn-coffee-medium">Button</button>
+    <button class="btn btn-coffee-light">Button</button>
+
+    <h3>自訂主題顏色 - travel</h3>
+    <a class="link-travel-primary" href="#">椰子樹</a>
+    <a class="link-travel-secondary" href="#">藍天</a>
+    <a class="link-travel-success" href="#">沙灘</a>
+
+    <h3>mix()、lighten()、darken()</h3>
+    <div class="box1 mix-light-color">mix-light</div>
+    <div class="box1 mix-dark-color">mix-dark</div>
+    <div class="box1 lighten-color">lighten</div>
+    <div class="box1 darken-color">darken</div>
+    <div class="box1 tint-color">tint</div>
+    <div class="box1 shade-color">shade</div>
+  </div>
+
+  <div id="section01">
+    <div class="container">
+      <h1>排版</h1>
+      <h2>斷點</h2>
+      <h4>rwd min-width 寫法:</h4>
+      <div class="myClass-1"></div>
+
+      <h4>rwd max-width 寫法:</h4>
+      <div class="myClass-2"></div>
+
+      <h4>rwd 介於兩個斷點之間寫法：</h4>
+      <div class="myClass-3"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>自訂元件</h1>
+    <p>可為專案自訂元件的樣式，例如卡片。</p>
+    <h2>卡片(Cards)</h2>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-coffee-dark">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-coffee-dark">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-coffee-dark">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-coffee-dark">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>自訂通用類別 class</h2>
+    <div class="w-100px h-100px bg-coffee-medium kaifu-border-dashed3 mb-3"></div>
+    <div class="w-100px h-100px bg-coffee-medium kaifu-border-dashed3-hover cursor-pointer-hover"></div>
+  </div>
+</body>
+
+</html>

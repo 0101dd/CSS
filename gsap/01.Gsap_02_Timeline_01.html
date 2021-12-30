@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css' />
+
+  <title>Document</title>
+  <style>
+    body {
+      padding-bottom: 300px;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7,
+    .box8,
+    .box9,
+    .box10,
+    .box11,
+    .box12,
+    .box13,
+    .box14,
+    .box15,
+    .box16,
+    .box17,
+    .box18,
+    .box19,
+    .box20,
+    .box21,
+    .box22,
+    .box23,
+    .box24,
+    .box25,
+    .box26,
+    .box27 {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      background: #000;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h2>timeline - 時間軸</h2>
+    <ul>
+      <li>timeline 是一種用來組織動畫的方式，它是 tween、其他 timeline 的容器，也是管理動畫的排序工具。</li>
+    </ul>
+
+    <hr>
+
+    <h3>tween 與 timeline 差異</h3>
+    <h4 class="mt-4">使用 tween 製作佇列動畫</h4>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <h4 class="mt-4">使用 timeline 製作佇列動畫</h4>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+
+    <hr>
+
+    <h3>defaluts 設定</h3>
+    <p>補間動畫屬性值相同時，會有重複不必要的程式碼。</p>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+
+    <p>使用 defaults，讓程式碼更加簡潔</p>
+    <div class="box10"></div>
+    <div class="box11"></div>
+    <div class="box12"></div>
+
+    <hr>
+
+    <h3>timeline 的 vars 物件設定</h3>
+    <p>vars 物件除了設定 defaults，還可以設定一些與補間動畫相同的屬性</p>
+    <div class="box13"></div>
+    <div class="box14"></div>
+    <div class="box15"></div>
+
+    <hr>
+
+    <h3>timeline 的方法</h3>
+    <p>timeline 繼承了 tween 所有方法，也有自己的方法。</p>
+    <div class="box16"></div>
+    <div class="box17"></div>
+    <div class="box18"></div>
+
+    <button id="play" class="mt-3">播放</button>
+    <button id="pause">暫停</button>
+    <button id="resume">恢復</button>
+
+    <hr>
+
+    <h3>timeline 的位置(position) 與 標籤(label)</h3>
+    <ul>
+      <li>新增子補間動畫時，第三參數為時間軸的 position 位置：</li>
+    </ul>
+    <div class="box19"></div>
+    <div class="box20"></div>
+    <div class="box21"></div>
+    <div class="box22"></div>
+    <div class="box23"></div>
+    <div class="box24"></div>
+    <button id="play2" class="mt-2">播放</button>
+
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js'></script>
+  <!-- gsap 主程式 -->
+  <script src="./js/gsap.js"></script>
+  <script>
+    /*
+      使用 tween 製作佇列動畫，雖可以使用 delay，但如果調動其中一個 delay，就需要調整其他動畫
+    */
+    gsap.to('.box1', { x: 500, duration: 1 })
+    gsap.to('.box2', { x: 500, duration: 1, delay: 1 })
+    gsap.to('.box3', { x: 500, duration: 1, delay: 2 })
+
+    /*
+      使用 timeline 製作佇列動畫，無需要整體 delay 的調動，可以很輕鬆讓補間動畫排列出場
+    */
+    // 建立時間軸容器
+    const tl1 = gsap.timeline()
+    tl1
+      .to('.box4', { x: 500, duration: 1 })
+      .to('.box5', { x: 500, duration: 2 })
+      .to('.box6', { x: 500, duration: 3 })
+
+    // default 設定 ------------------------------------------------------------------------------
+    const tl2 = gsap.timeline()
+    // 補間動畫屬性值相同時，會有重複不必要的程式碼
+    tl2
+      .to('.box7', { x: 500, duration: 1, ease: 'back' })
+      .to('.box8', { x: 750, duration: 1, ease: 'back' })
+      .to('.box9', { x: 1000, duration: 1, ease: 'back' })
+
+    // 使用 defaults，讓程式碼更加簡潔
+    const tl3 = gsap.timeline({
+      defaults: {
+        duration: 1,
+        ease: 'back'
+      }
+    })
+
+    tl3
+      .to('.box10', { x: 500 })
+      .to('.box11', { x: 750 })
+      .to('.box12', { x: 1000, duration: 5 }) // .box12 duration 覆蓋了 defaults 的設定
+
+    // timeline 的 vars 物件設定 -----------------------------------------------------------------------
+    // vars 物件除了設定 defaults，還可以設定一些與補間動畫相同的屬性
+    const tl4 = gsap.timeline({
+      defaults: {
+        duration: 1,
+        ease: 'power1.inOut'
+      },
+      delay: 0,
+      paused: false,
+      repeat: 1,
+      repeatDelay: 0,
+      yoyo: true,
+      repeatRefresh: true,
+      onStart: function (param1, param2) {
+        console.log(this)
+        console.log(param1, param2)
+      },
+      onStartParams: ['時間軸開始播放', 'Kaifu'],
+    })
+
+    tl4
+      .to('.box13', { x: '+=100' })
+      .to('.box14', { x: '+=150' })
+      .to('.box15', { x: '+=200' })
+
+    // timeline 的方法 -----------------------------------------------------------------------
+    const tl5 = gsap.timeline({
+      defaults: { duration: 3 },
+      paused: true
+    })
+    tl5
+      .to('.box16', { x: 300 })
+      .to('.box17', { x: 600 })
+      .to('.box18', { x: 900 })
+
+    $('#play').on('click', function () {
+      tl5.play()
+    })
+    $('#pause').on('click', function () {
+      tl5.pause()
+    })
+    $('#resume').on('click', function () {
+      tl5.resume()
+    })
+
+    // timeline 的位置(position) 與 標籤(label) --------------------------------------------------------
+    const tl6 = gsap.timeline({ paused: true })
+    tl6
+      .to('.box19', { x: 500, duration: 1 })
+      .to('.box20', { x: 500, duration: 1 })
+      .to('.box21', { x: 500, duration: 1 }, 6)
+      .to('.box22', { x: 500, duration: 1 }, 8)
+      .to('.box23', { x: 500, duration: 1 }, 5)
+      .to('.box24', { x: 500, duration: 1 }, 10)
+
+    $('#play2').on('click', function () {
+      tl6.play()
+    })
+  </script>
+
+</body>
+
+</html>

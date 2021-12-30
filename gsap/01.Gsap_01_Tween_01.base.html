@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css' />
+
+  <title>Document</title>
+  <style>
+    body {
+      padding-bottom: 500px;
+    }
+
+    h3 {
+      margin: 20px 0;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7,
+    .box8,
+    .box9,
+    .box10,
+    .box11 {
+      width: 50px;
+      height: 50px;
+      background: black;
+      margin: 5px;
+    }
+
+    .box2 {
+      background: red;
+    }
+
+    .box3 {
+      background: green;
+    }
+
+    .box4 {
+      background: blue;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>GSAP - 現代網路動畫標準規範</h1>
+    <h2>gsap 物件</h2>
+    <ul>
+      <li>使用 gsap.to()、gsap.from()、gsap.fromTo() 三種建立 tween 補間動畫的方法。</li>
+      <li>使用 gsap.timeline() 建立時間軸，它是補間動畫或其他時間軸的容器。</li>
+    </ul>
+
+    <hr>
+
+    <h2>tween - 補間動畫</h2>
+    <h3>1. 選擇目標</h3>
+    <div class="box1"></div>
+
+    <hr>
+
+    <h3>2. 選擇幾個群組時使用陣列</h3>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box3"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+
+    <hr>
+
+    <h3>3. 絕對數值</h3>
+    <div class="box5"></div>
+
+    <hr>
+
+    <h3>4. 相對數值</h3>
+    <div class="box6"></div>
+
+    <hr>
+
+    <h3>5. 隨機函式值(字串)</h3>
+    <div class="box7"></div>
+    <div class="box7"></div>
+    <div class="box7"></div>
+
+    <hr>
+
+    <h3>6. 函式作為值</h3>
+    <div class="box8"></div>
+    <div class="box8"></div>
+    <div class="box8"></div>
+
+    <hr>
+
+    <h3>7. 設定 CSS 屬性</h3>
+    <p id="word">報價英國估計上來超市系列生存寂寞姑娘顯卡真是，戀愛歐美緊張，添加人氣幾乎創意形式相應任何人高級畢業生，兩人看過圖片公司不太新浪次數他對美元，傳說合同免費新臺幣能在時候，把它施工再說法律給我們，西安我去群眾收到採用創造說了，躺在儘快肌膚位置外資主席幾次，男。</p>
+    <div class="box9" style="margin:auto"></div>
+    <div class="box9" style="margin:auto"></div>
+    <div class="box9" style="margin:auto"></div>
+
+    <hr>
+
+    <h3>8. 設定動畫屬性</h3>
+    <div class="box10"></div>
+    <button id="play">play</button>
+    <button id="pause">pause</button>
+
+    <hr>
+
+    <h3>9. keyframes 關鍵影格</h3>
+    <p>讓單一捕間動畫具有更多連續動作。</p>
+    <div class="box11"></div>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js'></script>
+  <!-- gsap 主程式 -->
+  <script src="./js/gsap.js"></script>
+  <script>
+    // 1. 選擇目標 --------------------------------------------------------------------------------------------
+    // gsap.to() 建立一個補間動畫，從目前狀態 到 設定狀態
+    // 參數一支援符合 css 選擇器字串(建議)、querySelector、jQuery 來選擇
+    // 參數二為物件，設定物件的屬性
+    const b1 = document.querySelector('.box1')
+    const b2 = $('.box1')
+    const tween1 = gsap.to('.box1', {
+      x: 1000,
+      rotation: 3600,
+      duration: 5
+    })
+
+    // 2. 選擇幾個群組時使用陣列 ----------------------------------------------------------------------------------
+    const dom1 = document.querySelectorAll('.box2')
+    const dom2 = document.querySelectorAll('.box3')
+    const dom3 = document.querySelectorAll('.box4')
+    const jq1 = $('.box2')
+    const jq2 = $('.box3')
+    const jq3 = $('.box4')
+
+    const tween2 = gsap.to(['.box1', '.box2', '.box3'], {
+      x: 500,
+      duration: 3
+    })
+
+    // 3. 絕對數值 ----------------------------------------------------------------------------------------------
+    const tween3 = gsap.to('.box5', {
+      x: 500,  // 絕對數值 - 無單位數字
+      x: '500px', // 絕對數值 - 加單位的字串
+      xPercent: 100, // 100 相當於 x: '100%'，官方建議用 XPercent、yPercent
+      duration: 3
+    })
+
+    // 4. 相對數值 ----------------------------------------------------------------------------------------------
+    let myVar = '300'
+    const tween4 = gsap.to('.box6', {
+      // x: '+=200', // 相對數值
+      x: `+=${myVar}`, // 搭配插值語法
+      repeat: 3, // 重複次數，加上初始播放動畫是 4 次
+      repeatRefresh: true, // 重複時紀錄目前狀態，通常是配合相對數值時
+      duration: 3
+    })
+
+    // 5. 隨機函式值(字串) ---------------------------------------------------------------------------------------
+    // 注意，隨機函式是字串
+    const tween5 = gsap.to('.box7', {
+      x: 'random(0,1000)', // 0 ~ 1000 隨機數字
+      x: 'random(500,1000,100)', // 500 ~ 1000 可以被 100 整除的數字
+      background: 'random([red,green,blue])', // 從陣列選擇一個值
+      duration: 3
+    })
+
+    // 6. 函式作為值 ---------------------------------------------------------------------------------------------
+    const tween6 = gsap.to('.box8', {
+      // 函式作為值提供三個參數，索引、目前元素、置放這些元素的陣列
+      x: function (index, target, targets) {
+        console.log(index, target, targets)
+        return 100 * (index + 1)
+      },
+      duration: 3
+    })
+
+    // 7. 設定 CSS 屬性 ------------------------------------------------------------------------------------------
+    const tween7 = gsap.to('.box9', {
+      // CSS 屬性，幾乎所有的CSS屬性都可以設定
+      x: '+=random(-100,100)', // 等同 translateX
+      y: '+=random(-100,100)', // 等同 translateY
+      rotation: 720, // 等同 rotate，可以個別設定 rotationX、rotationY
+      scale: 1.5, // 等同 scale，可以個別設定 scaleX、scaleY
+      skewX: 0, // 等同 skewX
+      skewY: 0, // 等同 skewY
+      width: 100,
+      height: 100,
+      backgroundColor: 'rgb(random(0,255),random(0,255),random(0,255))', // 屬性有"-"，要使用駝峰式寫法
+      opacity: 'random(0.1,1)',
+
+      // 動畫控制 
+      paused: true,
+      repeat: 5,
+      repeatRefresh: true,
+      duration: 1
+    })
+
+    // 文字屬性
+    const word = gsap.to('#word', {
+      color: 'random([red,green,blue])',
+      fontWeight: 'blod',
+      fontSize: '1.5rem',
+      lineHeight: 2,
+      letterSpacing: '1rem',
+      paused: true,
+      duration: 5
+    })
+
+    // 8. 設定動畫屬性 ---------------------------------------------------------------------------------------
+    const tween8 = gsap.to('.box10', {
+      x: 1000,
+      duration: 3, // 持續時間
+      delay: 0, // 初始播放的延遲時間
+      repeat: -1, // 重複次數，不包括初始播放，-1 無限次
+      repeatDelay: 0, // repeat 重複前的延遲時間
+      repeatRefresh: true,
+      yoyo: true, // 重複播放時像溜溜球往返
+      /*
+      [動畫速率]
+      https://greensock.com/docs/v3/Eases
+      預設 'power1.out' = 'power1'
+      其他值 'none','power1','power2','power3','power4','back','elastice','bounce','slow'
+      值後面可以接 .in、.inOut，沒寫 .out
+      或是步進動畫 'steps(n)'，n 為步進數字
+      */
+      ease: 'power1'
+    })
+
+    const play = document.querySelector('#play')
+    const pause = document.querySelector('#pause')
+    play.addEventListener('click', () => {
+      tween8.play()
+    })
+    pause.addEventListener('click', () => {
+      tween8.pause()
+    })
+
+    // 9. keyframes 關鍵影格 -----------------------------------------------------------------------
+    gsap.to('.box11', {
+      // 每個 keyframes 的預設設定
+      defaults: {
+        duration: 1,
+        delay: 1,
+        ease: 'elastic',
+      },
+      repeat: -1, // 整體跑完再一次，無限循環，不要將它設定 defaults，會造成每個 keyframes 都是 repeat: -1
+      keyframes: [
+        {
+          x: 200,
+          roation: 360,
+        },
+        {
+          y: 100,
+          scale: 0.1,
+        },
+        {
+          x: 0,
+          rotation: -360,
+          scale: 1.5,
+        },
+        {
+          y: 0,
+          scale: 1,
+        }
+      ],
+    })
+  </script>
+</body>
+
+</html>

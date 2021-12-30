@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css' />
+  <!-- 1. swiper css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <title>Document</title>
+  <style>
+    :root {
+      /* swiper 主題顏色 */
+      --swiper-theme-color: white;
+    }
+
+    body {
+      padding-bottom: 100px;
+    }
+
+    .container {
+      margin-bottom: 20px;
+    }
+
+    #kaifu2 {
+      width: 400px;
+      height: 400px;
+    }
+
+    #kaifu2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #kaifu3 .swiper-slide {
+      width: 300px;
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    #kaifu3 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Effect</h1>
+    <h2>fade</h2>
+    <div id="kaifu1" class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=5" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>cube</h2>
+    <div id="kaifu2" class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=5" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>coverflow</h2>
+    <div id="kaifu3" class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=5" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=6" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=7" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=8" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/400/?random=9" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js'></script>
+  <!-- 2. swiper js -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    const kaifu1 = new Swiper("#kaifu1", {
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      speed: 3000,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    const kaifu2 = new Swiper("#kaifu2", {
+      effect: "cube",
+      loop: true,
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    const kaifu3 = new Swiper("#kaifu3", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto", // 自動偵測可以顯示幾張
+      loop: true,
+      mousewheel: true, // 滾論操作上一張、下一張
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</body>
+
+</html>

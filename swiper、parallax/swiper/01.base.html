@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css' />
+  <!-- 1. swiper css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <title>Document</title>
+  <style>
+    :root {
+      /* swiper 主題顏色 */
+      --swiper-theme-color: white;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #kaifu.swiper {
+      height: 250px;
+    }
+
+    #kaifu .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 分頁指示器 */
+    #kaifu .swiper-pagination-bullet {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      font-size: 1.2rem;
+      color: white;
+      background: rgba(255, 120, 120, 0.5);
+      opacity: 1;
+      border-radius: 0px;
+    }
+
+    #kaifu .swiper-pagination-bullet-active {
+      color: #fff;
+      background: rgb(255, 120, 120);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>基本設定</h1>
+    <!-- Slider main container -->
+    <div id="kaifu" class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/1080/?random=1">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/1080/?random=2">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/1080/?random=3">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/1080/?random=4">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/1080/?random=5">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/1080/?random=6">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/1080/?random=7">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1920/1080/?random=8">
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <!-- 分頁 -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <!-- 上一張、下一張 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <!-- 進度條 -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js'></script>
+  <!-- 2. swiper js -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    // 設定目標 '#kaifu'
+    const swiper = new Swiper('#kaifu', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true, // 圖片是否無限循環拼接
+      speed: 1000, // 動畫轉場時間，毫秒
+      spaceBetween: 10, // 換圖時圖片與圖片間的距離
+      centeredSlides: true, // 將 item 置中排列，開始時第一張會在正中間
+      autoplay: {
+        delay: 5000 // 自動播放，設定幾秒播放下一張
+      },
+      // 使用斷點控制輪播圖各種參數，例如哪個尺寸顯示幾張圖片
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+        1200: {
+          slidesPerView: 5,
+        }
+      },
+
+      // If we need pagination
+      pagination: {
+        dynamicBullets: false, // 動態指示器
+        el: '.swiper-pagination',
+        // type: 'fraction',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true // 只在滑動時顯示，沒有動作時隱藏
+      },
+    });
+  </script>
+</body>
+
+</html>

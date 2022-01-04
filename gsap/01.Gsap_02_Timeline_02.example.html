@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css' />
+
+  <title>Document</title>
+  <style>
+    body {
+      height: 100vh;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .banner {
+      width: 800px;
+      height: 100px;
+      position: relative;
+    }
+
+    .item {
+      width: 100%;
+      font-size: 50px;
+      color: white;
+      text-align: center;
+      font-weight: 900;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="banner">
+    <div class="item">砸瓦魯多!</div>
+    <div class="item">1秒過去!2秒過去!3秒過去!</div>
+    <div class="item">7秒過去!Road Roller Da!</div>
+    <div class="item">歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!歐啦歐啦歐啦!</div>
+    <div class="item">無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!無駄無駄無駄無駄!</div>
+    <div class="item">8秒過去!ＷＲＹＹＹＹ～～～</div>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js'></script>
+  <!-- gsap 主程式 -->
+  <script src="./js/gsap.js"></script>
+  <script>
+    let staggerNum = 2.5
+
+    gsap.set('.banner', {
+      perspective: 300
+    })
+
+    const tl = gsap.timeline({
+      repeat: -1,
+      repeatDelay: 1
+    })
+
+    tl
+      .from('.item', {
+        y: 60,
+        rotationX: -90,
+        autoAlpha: 0,
+        stagger: {
+          each: staggerNum
+        }
+      })
+      .to('.item', {
+        y: -60,
+        rotationX: 90,
+        autoAlpha: 0,
+        stagger: {
+          each: staggerNum
+        }
+      }, staggerNum)
+  </script>
+</body>
+
+</html>

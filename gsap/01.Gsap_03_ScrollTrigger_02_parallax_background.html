@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css' />
+
+  <title>Document</title>
+  <style>
+    section {
+      height: 50vh;
+      font-size: 3rem;
+      color: white;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section id="section01">SECTION01</section>
+  <section id="section02">SECTION02</section>
+  <section id="section03">SECTION03</section>
+  <section id="section04">SECTION04</section>
+  <section id="section05">SECTION05</section>
+  <section id="section06">SECTION06</section>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js'></script>
+  <!-- gsap 主程式 -->
+  <script src="./js/gsap.js"></script>
+  <!-- gsap plugins -->
+  <script src="./js/ScrollTrigger.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger)
+
+    const sections = gsap.utils.toArray('section')
+    console.log(sections)
+    $(sections).each(function (index, section) {
+      $(section).css({
+        backgroundImage: `url(https://picsum.photos/1920/1080/?random=${index})`
+      })
+      gsap.to(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 50%',
+          end: 'bottom 0%',
+          scrub: true,
+          markers: true
+        },
+        backgroundPosition: '50% -50%',
+        ease: 'none'
+      })
+    })
+
+  </script>
+</body>
+
+</html>

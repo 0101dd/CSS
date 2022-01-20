@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .card {
+      width: 320px;
+      border: 1px solid rgb(200, 200, 220);
+      border-radius: 6px;
+      padding: 12px;
+    }
+
+    .card>.card-header>h1 {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+
+    .card>.card-body>img {
+      width: 100%;
+    }
+
+    .card>.card-body>p {
+      padding: 0.75rem 0;
+    }
+
+    .card>.card-footer>button {
+      display: block;
+      background: black;
+      width: 100%;
+      color: white;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body class="pb-96">
+  <div class="container bg-slate-300">
+    <h1 class="h1">功能優先(utility First)</h1>
+    <h2 class="h2">傳統</h2>
+    <p>傳統需纖維結構定義一組名稱，例如 Bootstrap Card。</p>
+    <div class="card">
+      <div class="card-header">
+        <h1>產品名稱</h1>
+      </div>
+      <div class="card-body">
+        <img src="https://picsum.photos/300/150/?random=10">
+        <p>你怎麼隱藏版屏東世界上一聲圖書衝擊還要老闆一台，至於取消，另一個機構，原料學科。</p>
+      </div>
+      <div class="card-footer">
+        <button>購買</button>
+      </div>
+    </div>
+
+    <div class="h2">TailwindCSS</div>
+    <p>使用大量工具類 class，直接為結構撰寫樣式，具有彈性客製化的特性。</p>
+    <ul>
+      <li>不用再為元件去想 class 盟稱，直覺性寫樣式。</li>
+      <li>開發者只需專注將 class 寫在 HTML 元素上。</li>
+      <li>工具類 class 可以完全重複使用，很少去編寫新的樣式。</li>
+    </ul>
+    <div class="w-80 border border-gray-300 rounded-md p-3">
+      <h1 class="text-2xl">產品名稱</h1>
+      <img class="w-full" src="https://picsum.photos/300/150/?random=10">
+      <p class="py-3">你怎麼隱藏版屏東世界上一聲圖書衝擊還要老闆一台，至於取消，另一個機構，原料學科。</p>
+      <button class="block bg-black w-full text-white px-3 py-2 rounded-md">購買</button>
+    </div>
+
+    <h2 class="h2">為何不使用 inline-style　就好？</h2>
+    <ul>
+      <li>tailwind 的 class 可以使用響應式設計，inline style 不行。</li>
+      <li>tailwind 的 class 可以使用狀態偽類，例如 hover、focus 等等，inline style 不行。</li>
+    </ul>
+
+    <hr>
+
+    <h1 class="h1">Hover、Focus 以及其他狀態</h1>
+    <h2 class="h2">focus</h2>
+    <input class="border shadow-sm h-8 focus:outline-none focus:ring-2 focus:ring-purple-600" type="text">
+
+    <h2 class="h2">hover</h2>
+    <button class="text-white bg-green-600 p-2 hover:bg-purple-600 hover:text-2xl">Button</button>
+
+    <h2 class="h2">active</h2>
+    <button class="text-white bg-green-600 p-2 active:bg-red-700">Button</button>
+
+    <h2 class="h2">group-hover</h2>
+    <div class="w-60 border rounded shadow-lg p-4 group hover:bg-cyan-600 hover:text-white hover:cursor-pointer">
+      <p class="text-2xl">Hello World</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, necessitatibus?</p>
+    </div>
+
+    <h2 class="h2">first-child、last-child</h2>
+    <ul>
+      <li class="first:text-red-600 last:text-blue-600">Lorem ipsum dolor sit amet.</li>
+      <li class="first:text-red-600 last:text-blue-600">Lorem ipsum dolor sit amet.</li>
+      <li class="first:text-red-600 last:text-blue-600">Lorem ipsum dolor sit amet.</li>
+      <li class="first:text-red-600 last:text-blue-600">Lorem ipsum dolor sit amet.</li>
+      <li class="first:text-red-600 last:text-blue-600">Lorem ipsum dolor sit amet.</li>
+    </ul>
+
+    <h2 class="h2">odd-child、even-child</h2>
+    <ul>
+      <li class="odd:text-blue-600">Lorem ipsum dolor sit amet.</li>
+      <li class="odd:text-blue-600">Lorem ipsum dolor sit amet.</li>
+      <li class="odd:text-blue-600">Lorem ipsum dolor sit amet.</li>
+      <li class="odd:text-blue-600">Lorem ipsum dolor sit amet.</li>
+      <li class="odd:text-blue-600">Lorem ipsum dolor sit amet.</li>
+    </ul>
+    <ul>
+      <li class="even:text-green-600">Lorem ipsum dolor sit amet.</li>
+      <li class="even:text-green-600">Lorem ipsum dolor sit amet.</li>
+      <li class="even:text-green-600">Lorem ipsum dolor sit amet.</li>
+      <li class="even:text-green-600">Lorem ipsum dolor sit amet.</li>
+      <li class="even:text-green-600">Lorem ipsum dolor sit amet.</li>
+    </ul>
+
+    <hr class="my-10">
+
+    <h1 class="h1">響應式設計(RWD)</h1>
+    <p>tailwind 可以使用斷點，預設有五個斷點，行動裝置優先的斷點系統(與 Bootstrap 相同)。</p>
+    <p>可以在 tailwind.config.js 修改斷點名稱、尺寸。</p>
+    <div>
+      <div class="inline-block text-white text-5xl p-2 my-2 bg-red-600 md:bg-yellow-300 lg:bg-green-600">JOJO 冒險野郎</div>
+      <img src="./images/jojo.jpg" class="border-8 border-red-600 md:border-yellow-300 lg:border-green-500">
+    </div>
+
+    <div class="flex flex-col w-full border border-gray-400 rounded-lg p-4 my-16 md:flex-row md:w-1/2 ">
+      <div class="h-60 md:h-auto">
+        <img class="object-cover w-full h-full" src="https://picsum.photos/500/500/?random=10">
+      </div>
+      <div class="py-4 md:px-4 md:py-0">
+        <h3 class="text-2xl">抽菸區，來了我只留。</h3>
+        <p>是啊你看鮮花成為，大會打開幫助回來知名日月潭，全文高效說是一臉，新手明顯點評作用億元這麼一段請求圖。</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <h1 class="h1">自訂樣式</h1>
+    <h2 class="h2">1. 修改 tailwind.confing.js 自訂主題</h2>
+    <p class="bg-coffee3 border-coffee2 text-kaifu1 text-2xl">設備抱著多個四個歌。</p>
+
+    <h2 class="h2">2. 使用任意值</h2>
+    <p>JIT(Just in time) 模式，可以任意撰寫屬性或值，彈性快速寫樣式。</p>
+    <div class="relative border-8 border-dashed w-[300px] h-[300px] border-[blue]">
+      <span class="bg-[#bada55] text-[red] absolute w-[100px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">為你跟着更加，孤獨數碼在此，世紀文件大。</span>
+    </div>
+
+    <hr>
+
+    <h1 class="h1">增加基底樣式 - @layer 與 @apply</h1>
+    <p>Tailwind 已經將元素 reset，但可以使用 @layer 與 @apply 來新增或修改基底樣式的預設值。</p>
+
+    <hr>
+
+    <h1 class="h1">提取成元件 - @layer 與 @apply</h1>
+    <p>如果經常重複使用的class，可以將其提取成元件。</p>
+    <button class="btn btn-primary">Button</button>
+    <button class="btn btn-success">Button</button>
+    <button class="btn btn-danger">Button</button>
+
+    <hr>
+
+    <h1 class="h1">函式()與指令@</h1>
+    <p>tailwind 提供函式與自訂屬於自己的 at-rule 指令讓我們使用。</p>
+
+    <h2 class="h2">@tailwind</h2>
+    <p>使用 @tailwind 指令可以把 Tailwind 的 base、components、utilities 和 screens 樣式插入到 CSS 中。</p>
+
+    <h2 class="h2">@apply</h2>
+    <p>提取 class 樣式來使用，可以多個 @apply</p>
+    <div class="apply-1">lorem</div>
+
+    <p>也可以混用 @apply 與基本 css 語法</p>
+    <p class="apply-2">aaa</p>
+
+    <p>也可以添加 !important</p>
+    <p class="apply-3">bbb</p>
+
+    <h2 class="h2">@layer</h2>
+    <p>使用 @layer 指令來告知 Tailwind 這組自訂義的樣式屬於哪一個層級，例如 base、components、utilities。</p>
+
+    <h2 class="h2">@screen</h2>
+    <p>@screen 指令可依照斷點名稱建立相關的媒體查詢。例如：</p>
+    <pre>
+      @media (min-width: 640px){
+        /* ... */
+      }
+    </pre>
+    <p>使用 @screen 指令來產生</p>
+    <pre>
+      @screen sm{
+        /* ... */
+      }
+    </pre>
+    <div class="abc"></div>
+
+    <h2 class="h2">screen()</h2>
+    <pre>
+      @media screen(sm) {
+        /* ... */
+      }
+    </pre>
+    <div class="xyz"></div>
+
+    <h2 class="h2">theme()</h2>
+    <p>使用 theme() 函式可引用 tailwind.confing.js 裡面的值，小數點要使用中括號[]。</p>
+    <div class="box-theme"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  a {
+    @apply text-blue-600 no-underline;
+  }
+  p {
+    @apply mb-4;
+  }
+  body {
+    font-family: 'Noto Sans TC';
+  }
+  hr {
+    @apply my-4;
+  }
+}
+
+@layer components {
+  .h1 {
+    @apply text-3xl text-blue-500 font-bold my-5;
+  }
+  .h2 {
+    @apply text-2xl text-green-500 my-4;
+  }
+  .box {
+    @apply w-[100px] h-[100px] bg-gray-200;
+  }
+  .btn {
+    /* @apply px-3 py-2 border border-gray-300; */
+    @apply rounded-full;
+  }
+  .btn-primary {
+    /* @apply text-white bg-blue-500 hover:bg-blue-700; */
+  }
+  .btn-success {
+    @apply text-white bg-green-500 hover:bg-green-700;
+  }
+  .btn-danger {
+    @apply text-white bg-red-500 hover:bg-red-700;
+  }
+
+  /* 也可以多個 @apply */
+  .apply-1 {
+    @apply bg-black;
+    @apply text-4xl;
+    @apply text-white;
+    @apply py-2;
+    @apply p-4;
+  }
+
+  .apply-2 {
+    color: white;
+    @apply bg-black;
+  }
+
+  .apply-3 {
+    @apply bg-blue-500 text-white !important;
+  }
+
+  .box-theme {
+    background: #333;
+    /* 引用 tailwind.config.js 的 spacing.12 = 3rem */
+    width: calc(200px - theme('spacing.12'));
+    /* 如果引用值有小數點，必須使用中括號 */
+    height: calc(100px - theme('spacing[2.5]'));
+  }
+}
+
+.container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* 將樣式內容直接寫到指定的斷點裡面 */
+@media screen(sm) {
+  .xyz {
+    width: 300px;
+    height: 300px;
+    background: red;
+  }
+}
+
+/* 也可以這樣寫 */
+@screen sm {
+  .abc {
+    width: 100px;
+    height: 100px;
+    background: blue;
+  }
+}
+
+@layer utilities {
+  .a {
+    color: red;
+  }
+}
